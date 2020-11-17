@@ -1,0 +1,1309 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Chat Manager - Codeigniter ( Socket.io) Node.js</title>
+	
+	<meta name="description" content="The one and only real-time fast message delivery system using websocket.">
+	<meta name="author" content="Complex Coder ">
+	<meta name="copyright" content="Complex Coder ">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2019-05-29T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+	<script src="assets/js/google-code-prettify/prettify.js"></script>
+
+	
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#EEEEEE;color:#383838;}
+		::-moz-selection{background:#333636;color:#00DFFC;}
+		::selection{background:#333636;color:#00DFFC;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#008C9E;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #008C9E, #006673);
+			  background-image: -ms-linear-gradient(top, #008C9E, #006673);
+			  background-image: -webkit-gradient(linear, 0 0, 0 008C9E%, from(#343838), to(#006673));
+			  background-image: -webkit-linear-gradient(top, #008C9E, #006673);
+			  background-image: -o-linear-gradient(top, #008C9E, #006673);
+			  background-image: linear-gradient(top, #008C9E, #006673);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008C9E', endColorstr='#006673', GradientType=0);
+			  border-color: #006673 #006673 #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #008C9E #008C9E #bfbfbf;
+		  background-color: #006673;
+		}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#343838;color:#FFFFFF;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #494F4F;-moz-text-shadow:1px 1px 0px #494F4F;text-shadow:1px 1px 0px #494F4F;}
+		#documenter_sidebar ul{border-top:1px solid #212424;}
+		#documenter_sidebar ul a{border-top:1px solid #494F4F;border-bottom:1px solid #212424;color:#FFFFFF;}
+		#documenter_sidebar ul a:hover{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_sidebar ul a.current{background:#333636;color:#00DFFC;border-top:1px solid #333636;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project-chat-manager-codeigniter-socketio-nodejs">
+	<div id="documenter_sidebar">
+	
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+				
+			<li><a href="#required_software" title="Required Software">Required Software</a></li>
+			<li><a href="#support" title="Support">Support</a></li>
+			<li><a href="#php_configuration" title="PHP Configuration">PHP Configuration</a></li>
+			<li><a href="#mysql_configuration" title="Mysql Configuration">Mysql Configuration</a></li>
+			<li><a href="#database_import" title="Database Import">Database Import</a></li>
+			<li><a href="#project_import" title="Project import">Project import</a></li>
+			<li><a href="#application_database_configuration" title="Application Database Configuration">Application Database Configuration</a></li>
+			<li><a href="#script_configuration" title="Script Configuration">Script Configuration</a></li>
+			<li><a href="#important" title="Important">Important</a></li>
+			<li><a href="#file_upload_management" title="File Upload management:">File Upload management:</a></li>
+			<li><a href="#start_node_server" title="Start Node Server">Start Node Server</a></li>
+			<li><a href="#postman_for_api_testing" title="Postman (For Api testing)">Postman (For Api testing)</a></li>
+			<li><a href="#id_based_login_integrating_this_app_with_your_application" title="Id based login (Integrating this app with your application)">Id based login (Integrating this app with your application)</a></li>
+			<li><a href="#socket_io_senders_and_listeners" title="Socket.io senders and listeners">Socket.io senders and listeners</a></li>
+			<li><a href="#client_side_socket_connection" title="Client side socket connection">Client side socket connection</a></li>
+			<li><a href="#php_side_socket_connections" title="PHP side socket connections">PHP side socket connections</a></li>
+			<li><a href="#socket_server" title="Socket server">Socket server</a></li>
+			<li><a href="#jwt_token_data_structure" title="Jwt token data structure">Jwt token data structure</a></li>
+			<li><a href="#jwt_token_location_on_browser" title="Jwt token location on browser">Jwt token location on browser</a></li>
+			<li><a href="#jwt_decoded_value" title="Jwt decoded value">Jwt decoded value</a></li>
+			<li><a href="#process_diagrams" title="Process Diagrams">Process Diagrams</a></li>
+
+		</ul>
+		<div id="documenter_copyright">Copyright Complex Coder  2019
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>Chat Manager - Codeigniter ( Socket.io) Node.js</h1>
+	
+	<div id="documenter_buttons">
+		
+	</div>
+	<hr>
+	<ul>
+	<li>created: 10 April 19</li>
+	<li>latest update: 05/29/2019</li>
+	<li>by: Complex Coder </li>
+	<li><a href=""></a></li>
+	<li>email: <a href="mailto:&#102;&#122;&#112;&#111;&#108;&#111;&#107;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#102;&#122;&#112;&#111;&#108;&#111;&#107;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+	</ul>
+	<p></p>
+	</section>
+	
+	<section id="required_software">
+	<div class="page-header"><h3>Required Software</h3><hr class="notop"></div>
+<ol>
+	<li>
+		Xampp (mysql version 5.6, php vertion 5.6 to 7.1.17)</li>
+	<li>
+		Node.js ( 10.15.3 LTS with npm 6.4.1)&nbsp;<a href="https://nodejs.org/download/release/latest-v10.x/" target="_blank">Download</a></li>
+	<li>
+		Postman (api testing)&nbsp;<a href="https://www.getpostman.com/" target="_blank">Download</a></li>
+</ol>
+</section>
+<section id="support">
+	<div class="page-header"><h3>Support</h3><hr class="notop"></div>
+<ol>
+	<li>
+		Check this Url before asking support question to Author<br style="font-variant-numeric: normal; font-variant-east-asian: normal; line-height: normal; text-align: -webkit-auto; text-size-adjust: auto;">
+		<a href="https://codecanyon.net/item_support/what_is_item_support/20061969?url_name=chat-application-codeigniter-socketio-nodejs" target="_blank">https://codecanyon.net/item_support/what_is_item_support/20061969?url_name=chat-application-codeigniter-socketio-nodejs</a></li>
+	<li>
+		<p>
+			Since server setup is not included in support and Linux has too many distributions with different<br>
+			installation process, that&#39;s why a simple and common setup process is supplied with some description<br>
+			about ssl for customers help. It is recommended by the developer that you must configure and test it in<br>
+			localhost with providing description first. Then put it on live server. Live server support service is paid.<br>
+			Author help is entirely available for local server (Ultra viewer or anydesk). Query regarding live server will<br>
+			not be answer without payment. Documentation contains both local and live server installation<br>
+			instructions.</p>
+	</li>
+	<li>
+		<span class="fontstyle0">Support Question Answer Time is </span><span class="fontstyle0" style="color:rgb(255,0,0);">Sunday to Thursday 4 Pm to 12 Am GMT+6 Bangladesh Time</span><span class="fontstyle0">. Click this link to check Bangladesh time.<br>
+		<a href="https://www.google.com/search?q=bangladesh+time+now&amp;oq=bangladesh+time+now&amp;aqs=chrome..69i57j" target="_blank">https://www.google.com/search?q=bangladesh+time+now&amp;oq=bangladesh+time+now&amp;aqs=chrome..69i57j</a></span></li>
+	<li>
+		Follow the steps very carefully. Otherwise, the application will fail to start.</li>
+</ol>
+</section>
+<section id="php_configuration">
+	<div class="page-header"><h3>PHP Configuration</h3><hr class="notop"></div>
+<p>
+	<span class="fontstyle0">You require to configure <strong>php.ini</strong> file to fix the upload limits in apache server. Find these lines in php.ini and<br>
+	change the values.</span></p>
+<pre class="prettyprint lang-php linenums">
+Upload_max_filesize=200M
+
+<span class="fontstyle0">post_max_size=200M</span>
+
+<span class="fontstyle0">memory_limit=300M</span>
+
+<span class="fontstyle0">allow_url_fopen=On</span></pre>
+<p>
+	<span class="fontstyle0">Now, restart your apache server. Otherwise, video and file upload, throw error.</span><br style="font-variant-numeric: normal; font-variant-east-asian: normal; line-height: normal; text-align: -webkit-auto; text-size-adjust: auto;">
+	<br>
+	&nbsp;</p>
+</section>
+<section id="mysql_configuration">
+	<div class="page-header"><h3>Mysql Configuration</h3><hr class="notop"></div>
+<p>
+	<span class="fontstyle0">If using Mysql 5.7 or greater then put this two lines at the end in <strong>mysql.cnf</strong> or <strong>mysql.ini</strong> and restart the mysql server.</span></p>
+<pre class="prettyprint lang-php linenums">
+[mysqld]
+sql-mode=&quot;&quot;
+</pre>
+</section>
+<section id="database_import">
+	<div class="page-header"><h3>Database Import</h3><hr class="notop"></div>
+<p>
+	<span class="fontstyle0">Go to your browser and type <a href="http://localhost/phpmyadmin" target="_blank">http://localhost/phpmyadmin</a></span><span class="fontstyle0" style="color:rgb(5,99,193);">&nbsp;</span><span class="fontstyle0">and click import. Click </span><span class="fontstyle2">choose file </span><span class="fontstyle0">button. Now<br>
+	browse to </span><span class="fontstyle2">extra </span><span class="fontstyle0">folder, select the </span><span class="fontstyle2">im_messenger.sql </span><span class="fontstyle0">file, and click </span><span class="fontstyle2">open</span><span class="fontstyle0">. Now go to the bottom of the page<br>
+	and click </span><span class="fontstyle2">Go </span><span class="fontstyle0">button. Now a database named im_messenger created with some tables. Here </span><span class="fontstyle2">localhost </span><span class="fontstyle0">means<br>
+	local server or domain without </span><span class="fontstyle2">ssl</span><span class="fontstyle0">.</span></p>
+</section>
+<section id="project_import">
+	<div class="page-header"><h3>Project import</h3><hr class="notop"></div>
+<p>
+	<span class="fontstyle0">Create a folder im-messenger inside xampp/htdocs folder. Place all contents on im_messenger.zip into that folder.</span></p>
+</section>
+<section id="application_database_configuration">
+	<div class="page-header"><h3>Application Database Configuration</h3><hr class="notop"></div>
+<pre class="prettyprint lang-plain linenums">
+Open &quot;xampp\htdocs\im-messenger\application\config\database.php&quot; and configure db settings <span class="fontstyle2">development</span><span class="fontstyle3">.</span></pre>
+<pre class="prettyprint lang-php linenums">
+if <span class="fontstyle2">(</span><span class="fontstyle2" style="color:rgb(102,0,0);">$mode </span><span class="fontstyle2">== </span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;development&quot;</span><span class="fontstyle2">) {</span>
+<span class="fontstyle2" style="color:rgb(102,0,0);">  $db</span><span class="fontstyle2">[</span><span class="fontstyle0" style="color:rgb(0,128,0);">&#39;default&#39;</span><span class="fontstyle2">][</span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;hostname&quot;</span><span class="fontstyle2">] = </span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;localhost&quot;</span><span class="fontstyle2">;</span>
+<span class="fontstyle2" style="color:rgb(102,0,0);">  $db</span><span class="fontstyle2">[</span><span class="fontstyle0" style="color:rgb(0,128,0);">&#39;default&#39;</span><span class="fontstyle2">][</span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;username&quot;</span><span class="fontstyle2">] = </span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;root&quot;</span><span class="fontstyle2">;</span>
+<span class="fontstyle2" style="color:rgb(102,0,0);">  $db</span><span class="fontstyle2">[</span><span class="fontstyle0" style="color:rgb(0,128,0);">&#39;default&#39;</span><span class="fontstyle2">][</span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;password&quot;</span><span class="fontstyle2">] = </span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;root&quot;</span><span class="fontstyle2">;</span>
+<span class="fontstyle2" style="color:rgb(102,0,0);">  $db</span><span class="fontstyle2">[</span><span class="fontstyle0" style="color:rgb(0,128,0);">&#39;default&#39;</span><span class="fontstyle2">][</span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;database&quot;</span><span class="fontstyle2">] = </span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;im_messenger&quot;</span><span class="fontstyle2">;
+} </span><span class="fontstyle0">else if </span><span class="fontstyle2">(</span><span class="fontstyle2" style="color:rgb(102,0,0);">$mode </span><span class="fontstyle2">== </span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;test_server&quot;</span><span class="fontstyle2">) {</span>
+<span class="fontstyle2" style="color:rgb(102,0,0);">  $db</span><span class="fontstyle2">[</span><span class="fontstyle0" style="color:rgb(0,128,0);">&#39;default&#39;</span><span class="fontstyle2">][</span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;hostname&quot;</span><span class="fontstyle2">] = </span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;localhost&quot;</span><span class="fontstyle2">;</span>
+<span class="fontstyle2" style="color:rgb(102,0,0);">  $db</span><span class="fontstyle2">[</span><span class="fontstyle0" style="color:rgb(0,128,0);">&#39;default&#39;</span><span class="fontstyle2">][</span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;username&quot;</span><span class="fontstyle2">] = </span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;root&quot;</span><span class="fontstyle2">;</span>
+<span class="fontstyle2" style="color:rgb(102,0,0);">  $db</span><span class="fontstyle2">[</span><span class="fontstyle0" style="color:rgb(0,128,0);">&#39;default&#39;</span><span class="fontstyle2">][</span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;password&quot;</span><span class="fontstyle2">] = </span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;&quot;</span><span class="fontstyle2">;</span>
+<span class="fontstyle2" style="color:rgb(102,0,0);">  $db</span><span class="fontstyle2">[</span><span class="fontstyle0" style="color:rgb(0,128,0);">&#39;default&#39;</span><span class="fontstyle2">][</span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;database&quot;</span><span class="fontstyle2">] = </span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;im_messenger&quot;</span><span class="fontstyle2">;
+} </span><span class="fontstyle0">else if </span><span class="fontstyle2">(</span><span class="fontstyle2" style="color:rgb(102,0,0);">$mode </span><span class="fontstyle2">== </span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;production&quot;</span><span class="fontstyle2">) {</span>
+<span class="fontstyle2" style="color:rgb(102,0,0);">  $db</span><span class="fontstyle2">[</span><span class="fontstyle0" style="color:rgb(0,128,0);">&#39;default&#39;</span><span class="fontstyle2">][</span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;hostname&quot;</span><span class="fontstyle2">] = </span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;&quot;</span><span class="fontstyle2">;</span>
+<span class="fontstyle2" style="color:rgb(102,0,0);">  $db</span><span class="fontstyle2">[</span><span class="fontstyle0" style="color:rgb(0,128,0);">&#39;default&#39;</span><span class="fontstyle2">][</span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;username&quot;</span><span class="fontstyle2">] = </span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;&quot;</span><span class="fontstyle2">;</span>
+<span class="fontstyle2" style="color:rgb(102,0,0);">  $db</span><span class="fontstyle2">[</span><span class="fontstyle0" style="color:rgb(0,128,0);">&#39;default&#39;</span><span class="fontstyle2">][</span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;password&quot;</span><span class="fontstyle2">] = </span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;&quot;</span><span class="fontstyle2">;</span>
+<span class="fontstyle2" style="color:rgb(102,0,0);">  $db</span><span class="fontstyle2">[</span><span class="fontstyle0" style="color:rgb(0,128,0);">&#39;default&#39;</span><span class="fontstyle2">][</span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;database&quot;</span><span class="fontstyle2">] = </span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;&quot;</span><span class="fontstyle2">;
+}</span> </pre>
+<div class="alert">
+	<strong><span class="fontstyle3"><span class="fontstyle0">Add this line </span><span class="fontstyle2" style="color:red;">include_once &#39;./vendor/autoload.php&#39;</span><span class="fontstyle0" style="color:rgb(255,0,0);">; </span><span class="fontstyle0">in<br>
+	&quot;xampp\htdocs\im-messenger\index.php&quot;<br>
+	Before </span><span class="fontstyle2" style="color:red;">require_once BASEPATH.&#39;core/CodeIgniter.php&#39;; </span><span class="fontstyle0" style="color:rgb(0,0,0);">line.</span></span></strong></div>
+<pre class="prettyprint lang-plain linenums">
+Open &quot;xampp\htdocs\im-messenger\ChatApp\databaseConfig.js&quot; and configure db settings for node.js</pre>
+<pre class="prettyprint lang-js linenums">
+const dbSettings={
+   connectionLimit: 10,
+   host: &#39;127.0.0.1&#39;,
+   user: &#39;root&#39;,
+   password: &#39;root&#39;,
+   database: &#39;im_messenger&#39;
+};</pre>
+</section>
+<section id="script_configuration">
+	<div class="page-header"><h3>Script Configuration</h3><hr class="notop"></div>
+<h3>
+	<span class="fontstyle0" style="color: rgb(255, 0, 0);"><span style="color: rgb(0, 0, 0);">https</span>&nbsp;</span><span class="fontstyle0">configuration on&nbsp;</span><span class="fontstyle0">port&nbsp;</span><span class="fontstyle0" style="color: rgb(255, 0, 0);">8443&nbsp;</span></h3>
+<ol>
+	<li>
+		Open <span class="fontstyle2">&quot;xampp\htdocs\im-messenger\ChatApp\serverConf.js&quot;</span></li>
+	<li>
+		Change <span class="fontstyle2">const </span><span class="fontstyle3">SSL</span><span class="fontstyle3" style="color:rgb(0,0,0);">=</span><span class="fontstyle2">false</span><span class="fontstyle3" style="color:rgb(0,0,0);">; to </span><span class="fontstyle2" style="color:rgb(0,0,0);">true</span></li>
+	<li>
+		Set server ssl certificate paths</li>
+</ol>
+<pre class="prettyprint lang-js linenums">
+const <span class="fontstyle2">opt</span><span class="fontstyle2" style="color:rgb(0,0,0);">={</span>
+<span class="fontstyle0" style="color:rgb(102,14,122);">  key</span><span class="fontstyle2" style="color:rgb(0,0,0);">: </span><span class="fontstyle2">fs</span><span class="fontstyle2" style="color:rgb(0,0,0);">.</span><span class="fontstyle3">readFileSync</span><span class="fontstyle2" style="color:rgb(0,0,0);">(</span><span class="fontstyle0" style="color:rgb(0,128,0);">&#39;/etc/live/xyz.com/privkey.pem&#39;</span><span class="fontstyle2" style="color:rgb(0,0,0);">), </span><span class="fontstyle3" style="color:rgb(128,128,128);">//location of private key file.required. extension can be .key</span>
+<span class="fontstyle0" style="color:rgb(102,14,122);">  cert</span><span class="fontstyle2" style="color:rgb(0,0,0);">: </span><span class="fontstyle2">fs</span><span class="fontstyle2" style="color:rgb(0,0,0);">.</span><span class="fontstyle3">readFileSync</span><span class="fontstyle2" style="color:rgb(0,0,0);">(</span><span class="fontstyle0" style="color:rgb(0,128,0);">&#39;/etc/live/xyz.com/cert.pem&#39;</span><span class="fontstyle2" style="color:rgb(0,0,0);">), </span><span class="fontstyle3" style="color:rgb(128,128,128);">//location of certificate file.required. extension can be .cert</span>
+<span class="fontstyle0" style="color:rgb(102,14,122);">  ca</span><span class="fontstyle2" style="color:rgb(0,0,0);">: </span><span class="fontstyle2">fs</span><span class="fontstyle2" style="color:rgb(0,0,0);">.</span><span class="fontstyle3">readFileSync</span><span class="fontstyle2" style="color:rgb(0,0,0);">(</span><span class="fontstyle0" style="color:rgb(0,128,0);">&#39;/etc/live/xyz.com/chain.pem&#39;</span><span class="fontstyle2" style="color:rgb(0,0,0);">) </span><span class="fontstyle3" style="color:rgb(128,128,128);">// optional</span>
+<span class="fontstyle2" style="color:rgb(0,0,0);">};</span>
+</pre>
+<ol start="4">
+	<li>
+		Open <span class="fontstyle2">&quot;xampp\htdocs\im-messenger\assets\newTheme\assets\js\si.js&quot;</span></li>
+	<li>
+		If https then connection String is</li>
+</ol>
+<pre class="prettyprint lang-js linenums">
+var <span class="fontstyle2">socket</span><span class="fontstyle3">=</span><span class="fontstyle0" style="color:rgb(102,14,122);">io</span><span class="fontstyle3">.</span><span class="fontstyle3" style="color:rgb(122,122,67);">connect</span><span class="fontstyle3">(</span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;wss://Domain.com:8443&quot;</span><span class="fontstyle3">);</span>
+</pre>
+<ol start="6">
+	<li>
+		Open <span class="fontstyle2">&quot;xampp\htdocs\im-messenger\application\config\config.php&quot;</span></li>
+	<li>
+		If SSL then&nbsp;<span class="fontstyle0" style="color:rgb(255,0,0);">find </span><span class="fontstyle0">and change the value (Don&rsquo;t create new one) of $config[</span><span class="fontstyle2">&#39;<strong>base_url</strong>&#39;</span><span class="fontstyle0">] and $config[</span><span class="fontstyle2">&#39;<strong>socket_url</strong>&#39;</span><span class="fontstyle0">]</span></li>
+</ol>
+<pre class="prettyprint lang-php linenums">
+$config<span class="fontstyle0" style="color:rgb(0,0,0);">[</span><span class="fontstyle1">&#39;base_url&#39;</span><span class="fontstyle0" style="color:rgb(0,0,0);">]= </span><span class="fontstyle1">&quot;</span><span class="fontstyle0">https://Domain.com/im-messenger</span><span class="fontstyle1">&quot;</span><span class="fontstyle0" style="color:rgb(0,0,0);">;</span>
+<span class="fontstyle0">$config</span><span class="fontstyle0" style="color:rgb(0,0,0);">[</span><span class="fontstyle1">&#39;socket_url&#39;</span><span class="fontstyle0" style="color:rgb(0,0,0);">] = </span><span class="fontstyle1">&quot;https://</span><span class="fontstyle0">Domain.com</span><span class="fontstyle1">:8443&quot;</span><span class="fontstyle0" style="color:rgb(0,0,0);">;</span>
+</pre>
+<p>
+	&nbsp;</p>
+<h3>
+	<span class="fontstyle0">http&nbsp;or localhost c</span><span class="fontstyle0">onfiguration on p</span><span class="fontstyle0">ort&nbsp;</span><span class="fontstyle0" style="color: rgb(255, 0, 0);">8080&nbsp;</span></h3>
+<ol>
+	<li>
+		Open <span class="fontstyle2">&quot;xampp\htdocs\im-messenger\assets\newTheme\assets\js\si.js&quot;</span></li>
+	<li>
+		<span class="fontstyle2">Change the&nbsp;</span>connection string to</li>
+</ol>
+<pre class="prettyprint lang-js linenums">
+<span class="fontstyle0">var </span><span class="fontstyle2">socket</span><span class="fontstyle3">=</span><span class="fontstyle0" style="color:rgb(102,14,122);">io</span><span class="fontstyle3">.</span><span class="fontstyle3" style="color:rgb(122,122,67);">connect</span><span class="fontstyle3">(</span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;ws://&quot;</span><span class="fontstyle3">+</span><span class="fontstyle2">location</span><span class="fontstyle3">.hostname+</span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;:8080&quot;</span><span class="fontstyle3">);</span>
+</pre>
+<ol start="3">
+	<li>
+		if you have domain Then <span class="fontstyle2">connection string is</span></li>
+</ol>
+<pre class="prettyprint lang-js linenums">
+var <span class="fontstyle2">socket</span><span class="fontstyle3">=</span><span class="fontstyle0" style="color:rgb(102,14,122);">io</span><span class="fontstyle3">.</span><span class="fontstyle3" style="color:rgb(122,122,67);">connect</span><span class="fontstyle3">(</span><span class="fontstyle0" style="color:rgb(0,128,0);">&quot;ws://Domain.com:8080&quot;</span><span class="fontstyle3">);</span> </pre>
+<ol start="4">
+	<li>
+		Open <span class="fontstyle2">&quot;xampp\htdocs\im-messenger\application\config\config.php&quot;</span></li>
+	<li>
+		Find <span class="fontstyle0" style="color:rgb(0,0,0);">and change the value (Don&rsquo;t create new one) of $config[</span><span class="fontstyle2">&#39;<strong>base_url</strong>&#39;</span><span class="fontstyle0" style="color:rgb(0,0,0);">] and $config[</span><span class="fontstyle2">&#39;<strong>socket_url</strong>&#39;</span><span class="fontstyle0" style="color:rgb(0,0,0);">]</span></li>
+</ol>
+<pre class="prettyprint lang-php linenums">
+$config<span class="fontstyle0" style="color:rgb(0,0,0);">[</span><span class="fontstyle1">&#39;base_url&#39;</span><span class="fontstyle0" style="color:rgb(0,0,0);">] = </span><span class="fontstyle1">&quot;</span><span class="fontstyle0">$root</span><span class="fontstyle1">&quot;</span><span class="fontstyle0" style="color:rgb(0,0,0);">;</span>
+<span class="fontstyle0">$config</span><span class="fontstyle0" style="color:rgb(0,0,0);">[</span><span class="fontstyle1">&#39;socket_url&#39;</span><span class="fontstyle0" style="color:rgb(0,0,0);">] = </span><span class="fontstyle1">&quot;http://localhost:8080&quot;</span><span class="fontstyle0" style="color:rgb(0,0,0);">;</span> </pre>
+</section>
+<section id="important">
+	<div class="page-header"><h3>Important</h3><hr class="notop"></div>
+<ul>
+	<li>
+		Port number(:8080 or :8443) is very important here. Wrong port number disconnects the application. So keep it same for&nbsp;<strong>config.php, serverConfig.js&nbsp;</strong><span class="fontstyle2" style="color: rgb(0, 0, 0);">and&nbsp;</span><strong>si.js</strong><span class="fontstyle0">.</span></li>
+	<li>
+		If you are using cloudflare for production server follow this link for workable ports.<br style="font-variant-numeric: normal; font-variant-east-asian: normal; line-height: normal; text-align: -webkit-auto; text-size-adjust: auto;">
+		<a href="https://support.cloudflare.com/hc/en-us/articles/200169156-Which-ports-will-Cloudflare-work-with-" target="_blank">https://support.cloudflare.com/hc/en-us/articles/200169156-Which-ports-will-Cloudflare-work-with-</a></li>
+	<li>
+		Open &ldquo;xampp\htdocs\im-messenger\application\config\config.php&quot;</li>
+	<li>
+		Set your purchase code provided by Envato inside double quotation<br style="font-variant-numeric: normal; font-variant-east-asian: normal; line-height: normal; text-align: -webkit-auto; text-size-adjust: auto;">
+		&nbsp;</li>
+</ul>
+<pre class="prettyprint lang-php linenums" style="background-image: url(&quot;../../_img/pre_bg.png&quot;);">
+$config[&#39;purchase_code&#39;] =&quot;&quot; ; </pre>
+<div class="alert alert-error">
+	<strong>Invalid purchase code or sales reversal (dispute) auto stop the script from running.</strong></div>
+<ul>
+	<li>
+		Find and Change the values of these variables with random string and numbers for security use</li>
+</ul>
+<pre class="prettyprint lang-php linenums" style="background-image: url(&quot;../../_img/pre_bg.png&quot;);">
+$config[&#39;encryption_key&#39;] = &#39;immessengerHashes1@2)98908000gfhj&#39;;
+$config[&#39;CONSUMER_KEY&#39;] = &#39;Nntwiso9gXreaB2msyCFz&#39;;
+$config[&#39;CONSUMER_SECRET&#39;] = &#39;yYNIn86DMxSiGSarZehUZ&#39;; </pre>
+<ul>
+	<li>
+		Assign the same &#39;CONSUMER_SECRET&#39; value in &quot;\xampp\htdocs\im-messenger\ChatApp\server.js&quot;</li>
+</ul>
+<pre class="prettyprint lang-js linenums" style="background-image: url(&quot;../../_img/pre_bg.png&quot;);">
+let CONSUMER_SECRET = &quot;yYNIn86DMxSiGSarZehUZ&quot;;
+</pre>
+<p>
+	<span class="fontstyle0">Otherwise Jwt verification throw&nbsp;</span><span class="fontstyle0" style="color: rgb(255, 0, 0);">error&nbsp;</span><span class="fontstyle0">in node server.</span></p>
+</section>
+<section id="file_upload_management">
+	<div class="page-header"><h3>File Upload management:</h3><hr class="notop"></div>
+<p>
+	<span class="fontstyle0">This application has fixed file upload size to 20mb max in client side. If you want to change the max limit in<br>
+	client side check this variable&nbsp;</span><strong><span style="color: rgb(69, 131, 131); font-family: &quot;Source Code Pro&quot;; font-size: 9pt;">max_upload_size</span></strong><span class="fontstyle0">&nbsp;in&nbsp;</span></p>
+<ul>
+	<li>
+		<strong><span style="color: rgb(69, 131, 131); font-family: &quot;Source Code Pro&quot;; font-size: 9pt;">&nbsp;</span></strong>&quot; xampp\htdocs\im-messenger\application\views\im_footer.php&quot;</li>
+	<li>
+		&quot;xampp\htdocs\im-messenger\application\views\mobile\message_footer.php&quot;</li>
+</ul>
+<p>
+	<span class="fontstyle0">20971520(20mb) to your desired limit. 20971520 is in bytes. Use an online megabyte to byte converter.<br>
+	Exp:&nbsp;<a href="https://www.gbmb.org/mb-to-bytes" target="_blank">https://www.gbmb.org/mb-to-bytes</a></span></p>
+<p>
+	Upload limit is also set on PHP level. Check this function <strong>sendmessage_post()</strong> in</p>
+<ul>
+	<li>
+		&quot;\xampp\htdocs\im-messenger\application\modules\imApi\controllers\ImApi.php&quot;</li>
+</ul>
+<pre class="prettyprint lang-php linenums">
+$config[&#39;max_size&#39;] = &#39;20480&#39;; // value is in KB
+</pre>
+<p>
+	<span class="fontstyle0">For Profile picture Upload limit is set to 5mb. Value is in bytes. Check Function</span></p>
+<pre class="prettyprint lang-js linenums">
+$<span class="fontstyle1">(</span><span class="fontstyle2">&quot;#profileImageFile&quot;</span><span class="fontstyle1">).change(</span><span class="fontstyle2">function </span><span class="fontstyle1">(event) {
+   ...
+});</span> </pre>
+<p>
+	Located in</p>
+<ul>
+	<li>
+		&quot;\xampp\htdocs\im-messenger\application\views\edit_profile_footer_script.php&quot;</li>
+	<li>
+		&quot;\xampp\htdocs\im-messenger\application\views\mobile\edit_profile_footer_script.php&quot;</li>
+</ul>
+<p>
+	For changing in PHP side&nbsp;&nbsp;<span class="fontstyle0">check Function&nbsp;</span><strong><span class="fontstyle2">profilePictureUpload_post() </span></strong><span class="fontstyle0">in file</span></p>
+<ul>
+	<li>
+		&quot;\xampp\htdocs\im-messenger\application\modules\user\controllers\User.php</li>
+</ul>
+<pre class="prettyprint lang-php linenums">
+$config[&#39;max_size&#39;] = &#39; 5120 &#39;; // value is in KB </pre>
+<p>
+	<span class="fontstyle0">To prevent miscellaneous script execution in upload folders two <strong>.htaccess</strong> files has been added in<br>
+	uploads folder with defined file types.</span></p>
+<ul>
+	<li>
+		\xampp\htdocs\im-messenger\assets\userImage\<span class="fontstyle1">.<strong>htaccess</strong></span></li>
+	<li>
+		<span class="fontstyle0">\xampp\htdocs\im-messenger\assets\im\</span><span class="fontstyle1">.<strong>htaccess</strong></span></li>
+</ul>
+<p>
+	&nbsp;</p>
+</section>
+<section id="start_node_server">
+	<div class="page-header"><h3>Start Node Server</h3><hr class="notop"></div>
+<ul>
+	<li>
+		Open a terminal and change the directory to &ldquo;xampp\htdocs\im-messenger\ChatApp&rdquo; folder.</li>
+	<li>
+		Type <strong>npm install&nbsp;</strong>and press enter. it will install all the node js dependency in <strong>node_modules </strong>folder.</li>
+	<li>
+		After that type <strong><span class="fontstyle2">node server.js </span></strong><span class="fontstyle0">and press </span><span class="fontstyle2">enter</span><span class="fontstyle0">. It will start the node server if everything is ok.</span></li>
+</ul>
+<p>
+	<img alt="" src="assets/images/terminal.png" style="width: 720px; height: 172px;"></p>
+<ul>
+	<li>
+		Browse the url <a href="http://localhost/im-messenger" target="_blank">http://localhost/im-messenger</a><span class="fontstyle0" style="color:rgb(5,99,193);">&nbsp;</span><span class="fontstyle0">and you will get the login screen.</span></li>
+	<li>
+		Browse to <a href="http://localhost:8080" target="_blank">http://localhost:8080</a><span class="fontstyle0" style="color:rgb(5,99,193);">&nbsp;</span><span class="fontstyle0">and you will get a simple welcome screen .</span><span class="fontstyle0" style="color:rgb(192,80,77);">if not then you have to open<br>
+		port 8080/8443 in server both inbound and outbound rules</span><span class="fontstyle0">(</span><span class="fontstyle0" style="color:rgb(255,20,24);">only for live server</span><span class="fontstyle0">).</span></li>
+	<li>
+		Browse the url&nbsp;<a href="http://localhost/im-messenger/admin" target="_blank">http://localhost/im-messenger/admin</a>&nbsp;<span class="fontstyle0">and you will get the admin login screen. (username:<br>
+		password) (</span><span class="fontstyle0" style="color:rgb(5,99,193);">&#97;&#100;&#109;&#105;&#110;&#64;&#97;&#100;&#109;&#105;&#110;&#46;&#99;&#111;&#109;:123456</span><span class="fontstyle0">)</span></li>
+	<li>
+		you can use <strong><span class="fontstyle2">pm2 </span></strong><span class="fontstyle0">to run node.js as background process. check&nbsp;<a href="http://pm2.keymetrics.io/" target="_blank">http://pm2.keymetrics.io/</a></span></li>
+</ul>
+</section>
+<section id="postman_for_api_testing">
+	<div class="page-header"><h3>Postman (For Api testing)</h3><hr class="notop"></div>
+<ul>
+	<li>
+		<span class="fontstyle0">Follow this video url and you will find the postman working process.</span></li>
+	<li>
+		Password : <strong>wzDunT9Yn163YW8</strong></li>
+	<li>
+		<a href="https://vimeo.com/260415357" target="_blank">https://vimeo.com/260415357</a></li>
+</ul>
+</section>
+<section id="id_based_login_integrating_this_app_with_your_application">
+	<div class="page-header"><h3>Id based login (Integrating this app with your application)</h3><hr class="notop"></div>
+<ul>
+	<li>
+		Open &quot;xampp\htdocs\im-messenger\index.php&quot; with notepad++</li>
+	<li>
+		Go to define(<span class="fontstyle2">&quot;ID_LOGIN&quot;</span><span class="fontstyle0">,</span><span class="fontstyle2">false</span><span class="fontstyle0">); in line 60</span></li>
+	<li>
+		<span class="fontstyle0">Turn it to true.</span></li>
+	<li>
+		<span class="fontstyle0">&nbsp;Follow this video link</span></li>
+	<li>
+		<span class="fontstyle0">Password : wzDunT9Yn163YW8</span></li>
+	<li>
+		<a href="https://vimeo.com/260415387" target="_blank">https://vimeo.com/260415387</a></li>
+	<li>
+		<a href="https://vimeo.com/260417921" target="_blank">https://vimeo.com/260417921</a></li>
+	<li>
+		<a href="https://vimeo.com/289356040" target="_blank">https://vimeo.com/289356040</a></li>
+	<li>
+		<span class="fontstyle0">Add userId in every api request in this application if id login is turned on.</span></li>
+	<li>
+		For jwt based login check this video</li>
+	<li>
+		<a href="https://vimeo.com/297308476" target="_blank">https://vimeo.com/297308476</a>&nbsp;(Jwt based login)</li>
+</ul>
+</section>
+<section id="socket_io_senders_and_listeners">
+	<div class="page-header"><h3>Socket.io senders and listeners</h3><hr class="notop"></div>
+<p>
+	<span class="fontstyle0">Socket.io is a realtime node. js library to receive a data in a real time frame. It transmits data using emit and listen<br>
+	and receive the data using on function. Since socket.io didn&rsquo;t show data in browser network tab, you have to put<br>
+	a </span><span class="fontstyle2">console.log </span><span class="fontstyle0">inside </span><span class="fontstyle2">on </span><span class="fontstyle0">to check the data structure.</span></p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="client_side_socket_connection">
+	<div class="page-header"><h3>Client side socket connection</h3><hr class="notop"></div>
+<p>
+	<span class="fontstyle0">You will obtain the socket connector in this file at socket block bottom of the page.</span></p>
+<ul>
+	<li>
+		<span class="fontstyle0">&quot; xampp\htdocs\im-messenger\application\</span><span class="fontstyle2">views</span><span class="fontstyle0">\im_footer.php&quot;</span></li>
+	<li>
+		<span class="fontstyle0">&nbsp;&quot;xampp\htdocs\im-messenger\application\views\</span><span class="fontstyle2">mobile</span><span class="fontstyle0">\group_footer.php&quot;</span></li>
+	<li>
+		<span class="fontstyle0">&quot;xampp\htdocs\im-messenger\application\views\</span><span class="fontstyle2">mobile</span><span class="fontstyle0">\info_footer.php&quot;</span></li>
+	<li>
+		<span class="fontstyle0">&nbsp;&quot;xampp\htdocs\im-messenger\application\views\</span><span class="fontstyle2">mobile</span><span class="fontstyle0">\message_footer.php&quot;</span></li>
+</ul>
+<table border="1" cellpadding="0" cellspacing="0" style="width:665px;" width="665">
+	<tbody>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<p>
+					<strong>NAME</strong></p>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					<strong>TYPE</strong></p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p>
+					<strong>DESCRIPTION</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<p>
+					<strong>joinRoom</strong></p>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					emit</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					To connect a room.&nbsp; The way is like room-7. 7 is message group id.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>leaveRoom</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					emit</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Leave the room.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>typing</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					emit</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Announce keyboard event if user typing something.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>notTyping</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					emit</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Announce keyboard event if the user gave up typing.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>fetchOnReconnect</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					emit</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Announce user is reconnected to the server.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>newMessage</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					on</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Receives message from server sends by the user</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>getFetchOnReconnect</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					on</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Fetch pending data, if any, after network connection back in for user.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>userTyping</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					on</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Recovers user typing data for that group</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>receiveSeen</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					on</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Recovers user seen data</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>userNotTyping</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					on</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Recovers data if a user stops typing in that group</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>reconnect</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					on</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Check socket.io documentation</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>register</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					emit</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Registering a user with the server</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>reconnecting</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					on</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Check socket.io documentation</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>updateGroupNameData</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					on</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Receives new group name from the server if changed by any user.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>addNewMember</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					on</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Get a recent member list from server if any new member added by any other member.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>deleteAMember</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					on</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Find a recent member list from server if any member deleted from the group.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>pendingMessage</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					on</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Get pending message information from server if any.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>updateStatus</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					on</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Acquire the message about member online, offline info</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>updateStatusOnReconnect</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					on</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Draw the message about member online, offline info if the current user reconnect to server again.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>blockStatus</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					on</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Gets group block status.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>muteStatus</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					on</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Gets the group mute status.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>sendText</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					emit</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					For sending text messages using socket.io.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>addNewGroup</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					on</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Send the current active group with update information.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px;height:24px;">
+				<pre>
+<strong>getSessionId</strong></pre>
+			</td>
+			<td style="width:99px;height:24px;">
+				<p>
+					on</p>
+			</td>
+			<td style="width:374px;height:24px;">
+				<p style="margin-left:.8pt;">
+					Provides a jwt encoded browser identification token (60<br>
+					char length) if sid is null in <strong>register </strong>. Save it in browser<br>
+					local storage for getting <strong>pendingMessage </strong>notification after<br>
+					<strong>reconnect. </strong><strong>Do not remove it when logout. server<br>
+					will auto correct the new user for the existing<br>
+					token. local storage key is </strong><strong>s_id</strong><strong>.</strong></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+</section>
+<section id="php_side_socket_connections">
+	<div class="page-header"><h3>PHP side socket connections</h3><hr class="notop"></div>
+<p>
+	You will see this connection in api functions. All of them are emit type, transmit data to socket server and socket server announce it to proper receivers. <strong>The register is common and added with every role listed in the PHP function column.</strong> Look into this file.</p>
+<p>
+	&quot;xampp\htdocs\im-messenger\application\modules\imApi\controllers\ImApi.php&quot;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="width:636px;" width="636">
+	<tbody>
+		<tr>
+			<td style="width:122px;">
+				<p>
+					<strong>NAME</strong></p>
+			</td>
+			<td style="width:183px;">
+				<p>
+					<strong>PHP FUNCTION</strong></p>
+			</td>
+			<td style="width:330px;">
+				<p>
+					<strong>DESCRIPTION</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:122px;">
+				<pre>
+<strong>sendMessage</strong></pre>
+			</td>
+			<td style="width:183px;">
+				<pre>
+1. memberUpdate</pre>
+				<pre>
+2. sendMessage_post</pre>
+				<p>
+					&nbsp;</p>
+			</td>
+			<td style="width:330px;">
+				<p>
+					Sends processed message and updates to the server.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:122px;">
+				<pre>
+<strong>deleteMember</strong></pre>
+			</td>
+			<td style="width:183px;">
+				<pre>
+1. deleteMember_post</pre>
+				<pre>
+2. leaveGroup_post</pre>
+				<p>
+					&nbsp;</p>
+			</td>
+			<td style="width:330px;">
+				<p>
+					&nbsp;Sends updated group member list to the server</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:122px;">
+				<pre>
+<strong>updateGroupName</strong></pre>
+				<p>
+					&nbsp;</p>
+			</td>
+			<td style="width:183px;">
+				<pre>
+1. changeGroupName_post</pre>
+			</td>
+			<td style="width:330px;">
+				<p>
+					&nbsp;Sends updated the group name to the server</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:122px;">
+				<pre>
+<strong>announceSeen</strong></pre>
+			</td>
+			<td style="width:183px;">
+				<pre>
+1. getMessage_get</pre>
+			</td>
+			<td style="width:330px;">
+				<p>
+					Send message seen status and data to the server</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:122px;">
+				<pre>
+<strong>addMember</strong></pre>
+			</td>
+			<td style="width:183px;">
+				<pre>
+1. addGroupMember_post</pre>
+			</td>
+			<td style="width:330px;">
+				<p>
+					Sends updated group member list to the server</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:122px;">
+				<pre>
+<strong>blockUpdate</strong></pre>
+			</td>
+			<td style="width:183px;">
+				<pre>
+1. blockGroup_post</pre>
+				<pre>
+2. unblockGroup_post</pre>
+				<pre>
+&nbsp;</pre>
+			</td>
+			<td style="width:330px;">
+				<p>
+					Sends group block, unblock status to the server</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:122px;">
+				<pre>
+<strong>muteUpdate</strong></pre>
+			</td>
+			<td style="width:183px;">
+				<pre>
+1. muteGroup_post</pre>
+				<pre>
+2. unmuteGroup_post</pre>
+			</td>
+			<td style="width:330px;">
+				<p>
+					Sends group user mute unmute status to server</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+</section>
+<section id="socket_server">
+	<div class="page-header"><h3>Socket server</h3><hr class="notop"></div>
+<p>
+	&quot;\xampp\htdocs\im-messenger\ChatApp\server.js&quot;</p>
+<p>
+	This file is the socket server. The table billow shows the on and emit function list. There can be multiple emit for a single on function (depends on programming logic and demands).</p>
+<p>
+	&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="width:649px;" width="649">
+	<tbody>
+		<tr>
+			<td style="width:194px;height:17px;">
+				<p>
+					<strong>On</strong></p>
+			</td>
+			<td style="width:222px;height:17px;">
+				<p>
+					<strong>Emit</strong></p>
+			</td>
+			<td style="width:234px;height:17px;">
+				<p>
+					<strong>Notes</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:194px;height:42px;">
+				<pre>
+<strong>disconnect</strong></pre>
+			</td>
+			<td style="width:222px;height:42px;">
+				<pre>
+<strong>updateStatus</strong></pre>
+			</td>
+			<td style="width:234px;height:42px;">
+				<pre>
+Check <em>DeleteSocket()-&gt;deactivateUser() function</em></pre>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:194px;height:17px;">
+				<pre>
+<strong>muteUpdate</strong></pre>
+			</td>
+			<td style="width:222px;height:17px;">
+				<pre>
+<strong>muteStatus</strong></pre>
+			</td>
+			<td style="width:234px;height:17px;">
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:194px;height:17px;">
+				<pre>
+<strong>blockUpdate</strong></pre>
+			</td>
+			<td style="width:222px;height:17px;">
+				<pre>
+<strong>blockStatus</strong></pre>
+			</td>
+			<td style="width:234px;height:17px;">
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:194px;height:17px;">
+				<pre>
+<strong>joinRoom</strong></pre>
+			</td>
+			<td style="width:222px;height:17px;">
+				<p>
+					&nbsp;</p>
+			</td>
+			<td style="width:234px;height:17px;">
+				<p style="margin-left:-1.75pt;">
+					&nbsp;Join a room. Room id is group id.</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:194px;height:17px;">
+				<pre>
+<strong>leaveRoom</strong></pre>
+			</td>
+			<td style="width:222px;height:17px;">
+				<p>
+					&nbsp;</p>
+			</td>
+			<td style="width:234px;height:17px;">
+				<p>
+					For leave a room</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:194px;height:17px;">
+				<pre>
+<strong>notTyping</strong></pre>
+			</td>
+			<td style="width:222px;height:17px;">
+				<p>
+					<strong>userNotTyping</strong></p>
+			</td>
+			<td style="width:234px;height:17px;">
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:194px;height:17px;">
+				<pre>
+<strong>typing</strong></pre>
+			</td>
+			<td style="width:222px;height:17px;">
+				<pre>
+<strong>userTyping</strong></pre>
+			</td>
+			<td style="width:234px;height:17px;">
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:194px;height:44px;">
+				<pre>
+<strong>register</strong></pre>
+			</td>
+			<td style="width:222px;height:44px;">
+				<pre>
+<strong>updateStatus</strong></pre>
+				<pre>
+<strong>updateStatusOnReconnect</strong></pre>
+				<p>
+					<strong>getSessionId</strong></p>
+			</td>
+			<td style="width:234px;height:44px;">
+				<pre>
+Check activeUser() function</pre>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:194px;height:17px;">
+				<pre>
+<strong>addMember</strong></pre>
+			</td>
+			<td style="width:222px;height:17px;">
+				<pre>
+<strong>addNewMember</strong></pre>
+			</td>
+			<td style="width:234px;height:17px;">
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:194px;height:17px;">
+				<pre>
+<strong>deleteMember</strong></pre>
+			</td>
+			<td style="width:222px;height:17px;">
+				<pre>
+<strong>deleteAMember</strong></pre>
+			</td>
+			<td style="width:234px;height:17px;">
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:194px;height:17px;">
+				<pre>
+<strong>updateGroupName</strong></pre>
+			</td>
+			<td style="width:222px;height:17px;">
+				<pre>
+<strong>updateGroupNameData</strong></pre>
+			</td>
+			<td style="width:234px;height:17px;">
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:194px;height:32px;">
+				<pre>
+<strong>sendMessage</strong></pre>
+			</td>
+			<td style="width:222px;height:32px;">
+				<pre>
+<strong>newMessage</strong></pre>
+				<pre>
+<strong>pendingMessage</strong></pre>
+			</td>
+			<td style="width:234px;height:32px;">
+				<pre>
+Check <em>pendingMessage() and sendMessage() </em>function</pre>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:194px;height:17px;">
+				<pre>
+<strong>announceSeen</strong></pre>
+			</td>
+			<td style="width:222px;height:17px;">
+				<pre>
+<strong>receiveSeen</strong></pre>
+			</td>
+			<td style="width:234px;height:17px;">
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:194px;height:31px;">
+				<pre>
+<strong>fetchOnReconnect</strong></pre>
+			</td>
+			<td style="width:222px;height:31px;">
+				<pre>
+<strong>getFetchOnReconnect</strong></pre>
+				<pre>
+<strong>receiveSeen</strong></pre>
+			</td>
+			<td style="width:234px;height:31px;">
+				<pre>
+Check <em>announceSeen </em>function</pre>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:194px;height:17px;">
+				<pre>
+<strong>error</strong></pre>
+			</td>
+			<td style="width:222px;height:17px;">
+				<p>
+					&nbsp;</p>
+			</td>
+			<td style="width:234px;height:17px;">
+				<p>
+					Only log error in server console</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:194px;height:17px;">
+				<pre>
+<strong>sendText</strong></pre>
+			</td>
+			<td style="width:222px;height:17px;">
+				<pre>
+<strong>newMessage</strong></pre>
+				<pre>
+<strong>pendingMessage</strong></pre>
+				<pre>
+<strong>addNewGroup</strong></pre>
+			</td>
+			<td style="width:234px;height:17px;">
+				<p>
+					Check sendMessage() function.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+</section>
+<section id="jwt_token_data_structure">
+	<div class="page-header"><h3>Jwt token data structure</h3><hr class="notop"></div>
+<pre class="prettyprint lang-js linenums">
+{
+&quot;consumerKey&quot;: &quot;fX5mHGD7UW&quot;,
+&quot;issuedAt&quot;: &quot;2018-02-14T09:43:28+0000&quot;,
+&quot;userName&quot;: &quot;anisul hoque&quot;,
+&quot;profilePicture&quot;: &quot;http://52.15.120.187/im-messenger/assets/userImage/06102017175310profile.jpg&quot;,
+&quot;userEmail&quot;: &quot;&#97;&#110;&#105;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;&quot;,
+&quot;userId&quot;: &quot;5&quot;,
+&quot;userType&quot;: &quot;1&quot;
+} </pre>
+<ul>
+	<li>
+		Consumer key (A unique randomkey): required for identify a user.</li>
+</ul>
+<pre class="prettyprint lang-plain linenums">
+<span class="fontstyle0">UserName : required
+profilePicture: required
+userEmail: required
+userId: required</span></pre>
+<ul>
+	<li>
+		<span class="fontstyle0">Other fields are optional</span></li>
+	<li>
+		<p>
+			This token is saved on user browser after login in local storage as encripted in a key <strong>_r</strong></p>
+	</li>
+</ul>
+</section>
+<section id="jwt_token_location_on_browser">
+	<div class="page-header"><h3>Jwt token location on browser</h3><hr class="notop"></div>
+<p>
+	<img alt="" src="assets/images/Picture1.png" style="width: 1000px; height: 336px;"></p>
+</section>
+<section id="jwt_decoded_value">
+	<div class="page-header"><h3>Jwt decoded value</h3><hr class="notop"></div>
+<p>
+	<a href="https://jwt.io/" target="_blank">https://jwt.io/</a></p>
+<p>
+	<img alt="" src="assets/images/Picture2.png" style="width: 1000px; height: 336px;"></p>
+</section>
+<section id="process_diagrams">
+	<div class="page-header"><h3>Process Diagrams</h3><hr class="notop"></div>
+<ul>
+	<li>
+		<p>
+			Send File/Block and mute/ Leave group/ Remove member</p>
+	</li>
+</ul>
+<p>
+	<img alt="" src="assets/images/Annotation1.jpg" style="width: 450px; height: 350px;"></p>
+<ul>
+	<li>
+		<p>
+			Send text message/ New message</p>
+	</li>
+</ul>
+<p>
+	<img alt="" src="assets/images/Annotation2.jpg"  ></p>
+</section>
+
+	</div>
+</body>
+</html>

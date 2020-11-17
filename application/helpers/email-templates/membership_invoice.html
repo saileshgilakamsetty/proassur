@@ -1,0 +1,125 @@
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="top">
+    <table width="600" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ccc;">
+  <tr>
+    <td align="left" valign="middle"><table width="100%" border="0" cellspacing="30" cellpadding="0">
+      <tr>
+        <td align="left" valign="middle"><img src="{{site_logo}}" width="137" height="77"></td>
+        <td align="right" valign="middle" style="font-size:15px; padding:0;"><strong style="display:inline-block; font-size:30px; letter-spacing:2px; padding-top:30px; text-transform:uppercase;">{{email_invoice}}</strong><br>{{invoice_date}}</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="left" valign="middle" bgcolor="#000000">
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="30">
+  <tr>
+    <td width="72%" align="left" valign="top" style="color:#fff; font-size:14px">
+    <strong style="display:inline-block; font-size:16px !important; font-weight:700; padding-bottom:4px;">{{username}}</strong><br>
+    {{site_location}}
+    </td>
+    <td width="28%" align="left" valign="top" style="color:#fff; font-size:14px">
+    {{invoice_bill_number}}:<br>
+  <strong style="display:inline-block; font-size:16px; font-weight:700; padding-bottom:4px;">{{txn_id}}</strong><br>
+     {{invoice_client_number}}:<br>
+  <strong style="display:inline-block; font-size:16px; font-weight:700; padding-bottom:4px;">{{client_number}}</strong>
+    </td>
+  </tr>
+</table>
+
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" style="padding:30px;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-size:12px; color:#333;" >
+  <tr>
+    <th align="left" valign="top" style="border-bottom:1px solid #ccc; padding-bottom:15px;">{{invoice_designation}}</th>
+    <th align="left" valign="top" style="border-bottom:1px solid #ccc; padding-bottom:15px;">{{invoice_period}} ({{period}})</th>
+    <th align="left" valign="top" style="border-bottom:1px solid #ccc; padding-bottom:15px;">{{invoice_price}} </th>
+    <th align="right" valign="top" style="border-bottom:1px solid #ccc; padding-bottom:15px;">{{invoice_total}}</th>
+  </tr>
+  <tr>
+    <td align="left" valign="top" style="padding-top:15px;">{{membership}}</td>
+    <td align="left" valign="top" style="padding-top:15px;">{{invoice_date}} - {{exp_date}}</td>
+    <td align="left" valign="top" style="padding-top:15px;">{{amount}}</td>
+    <td align="right" valign="top" style="padding-top:15px;">{{amount}}</td>
+  </tr>
+  </tr>
+</table>
+  
+
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="middle" style="background:#e8e8e8; border-bottom:1px solid #929292; border-top:1px solid #929292;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" colspan="2" valign="top" style="border-bottom:1px solid #c7c7c7; padding:15px;">TOTAL CHF HT : </td>
+    <td align="right" valign="top" style="border-bottom:1px solid #c7c7c7; padding:15px;">{{amount}}</td>
+    <tr/>
+    <tr>
+    <td align="right" colspan="2" valign="top" style="border-bottom:1px solid #c7c7c7; padding:15px;">TOTAL CHF TVA ( 0.00% ) : </td>
+     <td align="right" valign="top" style="border-bottom:1px solid #c7c7c7; padding:15px;">{{amount}}</td>
+    <tr/>
+    <tr>
+    <td align="right" colspan="2" valign="top" style="border-bottom:1px solid #c7c7c7;padding:15px; "><strong>TOTAL CHF TTC : </strong></td>
+    <td align="right" valign="top" style="border-bottom:1px solid #c7c7c7; padding:15px;"><strong style="color:#1fc32e; font-size:16px; font-weight:700;">{{amount}}</strong></td>
+  </tr>
+  <tr>
+    
+   
+    
+  </tr>
+</table>
+
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="middle" style="padding:30px;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="middle">
+    <strong style="display:block; margin-bottom:10px; font-weight:700;">{{term_and_conditions}}</strong>
+    {{conditions}}  
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="middle">
+    <br/>
+    <strong style="display:block; margin-bottom:10px; font-weight:400;">{{invoice_payment}}</strong>
+    {{amount}} received on {{receive_date}} {{invoice_by_paypal}} 
+    </td>
+  </tr>
+</table>
+
+    </td>
+  </tr>
+   <tr>
+    <td align="left" valign="top" style="background:#000;" >
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style=" color:#fff; font-size:12px;">
+  <tr>
+    <td width="63%" style="border-bottom:1px solid #292929; padding:15px 0 15px 30px;">lapsmile Sàrl</td>
+    <td width="37%" style="border-bottom:1px solid #292929; padding:15px 0 15px 0;">N* TVA : CHE- 198.200.681</td>
+  </tr>
+  <tr>
+    <td style="padding:15px 0 5px 30px;">Avenue de la Gare 45</td>
+    <td style="padding:15px 0 5px 0;">N* de société : CH-621-4010048-2</td>
+  </tr>
+  <tr>
+    <td style="padding:5px 0 20px 30px;">VS - 1920 Martigny - Suisse</td>
+    <td style="padding:5px 0 20px 0;"><a href="#" style="color:#fff; text-decoration:none; outline:none;">www.lapsmile.ch</a></td>
+  </tr>
+</table>
+
+    </td>
+  </tr>
+</table>
+
+    </td>
+  </tr>
+</table>
+
+
+
+              
+          

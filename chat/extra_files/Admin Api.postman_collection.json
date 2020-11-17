@@ -1,0 +1,343 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Admin Api",
+		"_postman_id": "de2b263f-ea0f-ca03-20ac-6965eeef5416",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "search user by email",
+			"request": {
+				"url": "http://localhost/im-messenger/adminApi/searchUserEmail",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA==",
+						"description": ""
+					},
+					{
+						"key": "Authorizationkeyfortoken",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6InVFek9aVXJMM2giLCJpc3N1ZWRBdCI6IjIwMTctMDYtMTVUMTg6MTA6NTgrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlckVtYWlsIjoic2ltb25AZ21haWwuY29tIiwidXNlcklkIjoiNCIsInVzZXJUeXBlIjoiMSJ9.wjWYc7tK6npP_yNsp6GZR-b-pf80QB087kCiMcIMLfc",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "fz",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create Admin",
+			"request": {
+				"url": "http://localhost/im-messenger/adminApi/createAdmin",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA==",
+						"description": ""
+					},
+					{
+						"key": "Authorizationkeyfortoken",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6InVFek9aVXJMM2giLCJpc3N1ZWRBdCI6IjIwMTctMDYtMTVUMTg6MTA6NTgrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlckVtYWlsIjoic2ltb25AZ21haWwuY29tIiwidXNlcklkIjoiNCIsInVzZXJUeXBlIjoiMSJ9.wjWYc7tK6npP_yNsp6GZR-b-pf80QB087kCiMcIMLfc",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userName",
+							"value": "Farhad",
+							"type": "text"
+						},
+						{
+							"key": "userEmail",
+							"value": "polok01717@frt.com",
+							"type": "text"
+						},
+						{
+							"key": "userPass",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "userType",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get Admin by id",
+			"request": {
+				"url": {
+					"raw": "http://localhost/im-messenger/adminApi/getAdminById?userId=12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"adminApi",
+						"getAdminById"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "12",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA==",
+						"description": ""
+					},
+					{
+						"key": "Authorizationkeyfortoken",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6InVFek9aVXJMM2giLCJpc3N1ZWRBdCI6IjIwMTctMDYtMTVUMTg6MTA6NTgrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlckVtYWlsIjoic2ltb25AZ21haWwuY29tIiwidXNlcklkIjoiNCIsInVzZXJUeXBlIjoiMSJ9.wjWYc7tK6npP_yNsp6GZR-b-pf80QB087kCiMcIMLfc",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "far",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get user by id",
+			"request": {
+				"url": {
+					"raw": "http://localhost/im-messenger/adminApi/getUserById?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"adminApi",
+						"getUserById"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA==",
+						"description": ""
+					},
+					{
+						"key": "Authorizationkeyfortoken",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6InVFek9aVXJMM2giLCJpc3N1ZWRBdCI6IjIwMTctMDYtMTVUMTg6MTA6NTgrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlckVtYWlsIjoic2ltb25AZ21haWwuY29tIiwidXNlcklkIjoiNCIsInVzZXJUeXBlIjoiMSJ9.wjWYc7tK6npP_yNsp6GZR-b-pf80QB087kCiMcIMLfc",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "far",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "chart data",
+			"request": {
+				"url": {
+					"raw": "http://localhost/im-messenger/adminApi/getChartData?year=2017",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"adminApi",
+						"getChartData"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2017",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA==",
+						"description": ""
+					},
+					{
+						"key": "Authorizationkeyfortoken",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6InVFek9aVXJMM2giLCJpc3N1ZWRBdCI6IjIwMTctMDYtMTVUMTg6MTA6NTgrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlckVtYWlsIjoic2ltb25AZ21haWwuY29tIiwidXNlcklkIjoiNCIsInVzZXJUeXBlIjoiMSJ9.wjWYc7tK6npP_yNsp6GZR-b-pf80QB087kCiMcIMLfc",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "far",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get user messenger Group List for admin",
+			"request": {
+				"url": {
+					"raw": "http://localhost/im-messenger/adminApi/getGroups?userId=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"adminApi",
+						"getGroups"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "4",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA==",
+						"description": ""
+					},
+					{
+						"key": "Authorizationkeyfortoken",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6InVFek9aVXJMM2giLCJpc3N1ZWRBdCI6IjIwMTctMDYtMTVUMTg6MTA6NTgrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlckVtYWlsIjoic2ltb25AZ21haWwuY29tIiwidXNlcklkIjoiNCIsInVzZXJUeXBlIjoiMSJ9.wjWYc7tK6npP_yNsp6GZR-b-pf80QB087kCiMcIMLfc",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "far",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get user messenger mesasage  for admin",
+			"request": {
+				"url": {
+					"raw": "http://localhost/im-messenger/adminApi/getMessage?groupId=11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"adminApi",
+						"getMessage"
+					],
+					"query": [
+						{
+							"key": "groupId",
+							"value": "11",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA==",
+						"description": ""
+					},
+					{
+						"key": "Authorizationkeyfortoken",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6InVFek9aVXJMM2giLCJpc3N1ZWRBdCI6IjIwMTctMDYtMTVUMTg6MTA6NTgrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlckVtYWlsIjoic2ltb25AZ21haWwuY29tIiwidXNlcklkIjoiNCIsInVzZXJUeXBlIjoiMSJ9.wjWYc7tK6npP_yNsp6GZR-b-pf80QB087kCiMcIMLfc",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "far",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

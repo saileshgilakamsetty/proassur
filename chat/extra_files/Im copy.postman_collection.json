@@ -1,0 +1,2051 @@
+{
+	"info": {
+		"_postman_id": "4bebf27a-d612-46ca-9fcc-6f048510734c",
+		"name": "Im copy copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "searchMessageList",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6InVFek9aVXJMM2giLCJpc3N1ZWRBdCI6IjIwMTktMDUtMTlUMTk6MjM6NTMrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlck5hbWUiOiJzaW1vbiAiLCJwcm9maWxlUGljdHVyZSI6Imh0dHA6XC9cL2ltLW1lc3Nlbmdlci50ZXN0XC9hc3NldHNcL3VzZXJJbWFnZVwvMDQxNjIwMTg5MzcxNHByb2ZpbGU0LmpwZyIsInVzZXJFbWFpbCI6InNpbW9uQGdtYWlsLmNvbSIsInVzZXJJZCI6IjQiLCJ1c2VyVHlwZSI6IjEifQ.cCiWsROtnP_5bGZW3yT-gsge5p6AVeJebQk4eGnEMi0"
+					}
+				],
+				"url": {
+					"raw": "https://localhost/im-messenger/imApi/searchMessageList?groupId=8&m_id=2355",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"searchMessageList"
+					],
+					"query": [
+						{
+							"key": "groupId",
+							"value": "8"
+						},
+						{
+							"key": "userId",
+							"value": "4",
+							"disabled": true
+						},
+						{
+							"key": "m_id",
+							"value": "2355"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get Message by groupId or user[]",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46MTIzNA==",
+								"warning": ""
+							},
+							{
+								"key": "Authorizationkeyfortoken",
+								"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImJ0WlNtTmZ0YloiLCJpc3N1ZWRBdCI6IjIwMTctMTAtMzFUMTA6Mjg6MzcrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlckVtYWlsIjoic2ltb25AZ21haWwuY29tIiwidXNlcklkIjoiMTAiLCJ1c2VyVHlwZSI6IjEifQ.ig2XjFK9fWPj5QXoM-oc5mRGN10scjEDF3deEl-3Bz4",
+								"warning": ""
+							}
+						],
+						"url": {
+							"raw": "http://localhost/im-messenger/imApi/getMessage?groupId=1&limit=100&start=7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"im-messenger",
+								"imApi",
+								"getMessage"
+							],
+							"query": [
+								{
+									"key": "groupId",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "start",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "cache-control",
+							"value": "no-store, no-cache, must-revalidate",
+							"name": "cache-control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "connection",
+							"value": "Keep-Alive",
+							"name": "connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "content-length",
+							"value": "6526",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "date",
+							"value": "Tue, 31 Oct 2017 11:02:14 GMT",
+							"name": "date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+							"name": "expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5, max=100",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "pragma",
+							"value": "no-cache",
+							"name": "pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "server",
+							"value": "Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9",
+							"name": "server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "PHP/7.1.9",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"body": "{\"status\":{\"code\":200,\"message\":\"Success\"},\"totalMessage\":\"14\",\"response\":[{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"1\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\",\"type\":\"text\",\"link\":\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\\\",\\\"host\\\":\\\"www.youtube.com\\\",\\\"title\\\":\\\"The Kapil Sharma Show - \\u0926\\u0940 \\u0915\\u092a\\u093f\\u0932 \\u0936\\u0930\\u094d\\u092e\\u093e \\u0936\\u094b-Ep-33\\u2013Rustom in Kapil's Mohalla\\u2013 13th Aug 2016\\\",\\\"description\\\":\\\"Bollywood Superstar Akshay Kumar, Ileana D'Cruz, and Esha Gupta are the special guest tonight on \\u2018The Kapil Sharma Show\\u2019. The team of Comedy King Kapil Sharm...\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/www.youtube.com\\/embed\\/irPnf9IX_JE\\\",\\\"type\\\":\\\"player\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:04:02\",\"date_time\":\"2017-10-19 19:04:02\",\"ios_date_time\":\"2017-10-19T19:04:02+0000\"}},{\"sender\":{\"userId\":5,\"firstName\":\"anisul\",\"lastName\":\"hoque\",\"userEmail\":\"anis@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/0611201773348profile.jpg\"},\"message\":{\"m_id\":\"2\",\"sender\":\"5\",\"receiver\":\"1\",\"message\":\"cfcfcfcfc\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:04:37\",\"date_time\":\"2017-10-19 19:04:37\",\"ios_date_time\":\"2017-10-19T19:04:37+0000\"}},{\"sender\":{\"userId\":5,\"firstName\":\"anisul\",\"lastName\":\"hoque\",\"userEmail\":\"anis@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/0611201773348profile.jpg\"},\"message\":{\"m_id\":\"3\",\"sender\":\"5\",\"receiver\":\"1\",\"message\":\"vvxcvxcvxcvxcv\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:05:02\",\"date_time\":\"2017-10-19 19:05:02\",\"ios_date_time\":\"2017-10-19T19:05:02+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"4\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\",\"type\":\"text\",\"link\":\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\\\",\\\"host\\\":\\\"www.google.com.bd\\\",\\\"title\\\":\\\"National Parliament House\\\",\\\"description\\\":\\\"Manik Mia Ave, Dhaka\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/maps.google.com\\/maps\\/api\\/staticmap?center=23.762300984583586%2C90.37656071498157&zoom=16&size=256x256&language=en&markers=23.762300999999997%2C90.37874939999999&sensor=false&client=google-maps-frontend&signature=2wuNbESqzTWJjKvYtMVv9F-4odE\\\",\\\"type\\\":\\\"image\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"08:11:34\",\"date_time\":\"2017-10-20 08:11:34\",\"ios_date_time\":\"2017-10-20T08:11:34+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"6\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\",\"type\":\"text\",\"link\":\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\\\",\\\"host\\\":\\\"github.com\\\",\\\"title\\\":\\\"velocityzen\\/meta-extractor\\\",\\\"description\\\":\\\"meta-extractor - Super simple and fast html page meta data extractor\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/avatars3.githubusercontent.com\\/u\\/451068?s=400&v=4\\\",\\\"type\\\":\\\"image\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"09:08:25\",\"date_time\":\"2017-10-20 09:08:25\",\"ios_date_time\":\"2017-10-20T09:08:25+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"7\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.google.com\\/search?rlz=1C1AVFC_enBD767BD767&amp;q=img-responsive&amp;spell=1&amp;sa=X&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&amp;biw=1366&amp;bih=637\",\"type\":\"text\",\"link\":\"https:\\/\\/www.google.com\\/search?amp;bih=637&amp;biw=1366&amp;q=img-responsive&amp;sa=X&amp;spell=1&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&rlz=1C1AVFC_enBD767BD767\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.google.com\\/search?amp;bih=637&amp;biw=1366&amp;q=img-responsive&amp;sa=X&amp;spell=1&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&rlz=1C1AVFC_enBD767BD767\\\",\\\"host\\\":\\\"www.google.com\\\",\\\"title\\\":\\\"Google\\\",\\\"description\\\":\\\"Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":null,\\\"type\\\":null}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"09:25:45\",\"date_time\":\"2017-10-20 09:25:45\",\"ios_date_time\":\"2017-10-20T09:25:45+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"8\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"\\ud83d\\ude05\\ud83d\\ude1f\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-21\",\"time\":\"04:21:56\",\"date_time\":\"2017-10-21 16:21:56\",\"ios_date_time\":\"2017-10-21T16:21:56+0000\"}}]}"
+				}
+			]
+		},
+		{
+			"name": "searchMessageLower",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6InVFek9aVXJMM2giLCJpc3N1ZWRBdCI6IjIwMTktMDUtMTlUMTk6MjM6NTMrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlck5hbWUiOiJzaW1vbiAiLCJwcm9maWxlUGljdHVyZSI6Imh0dHA6XC9cL2ltLW1lc3Nlbmdlci50ZXN0XC9hc3NldHNcL3VzZXJJbWFnZVwvMDQxNjIwMTg5MzcxNHByb2ZpbGU0LmpwZyIsInVzZXJFbWFpbCI6InNpbW9uQGdtYWlsLmNvbSIsInVzZXJJZCI6IjQiLCJ1c2VyVHlwZSI6IjEifQ.cCiWsROtnP_5bGZW3yT-gsge5p6AVeJebQk4eGnEMi0"
+					}
+				],
+				"url": {
+					"raw": "https://localhost/im-messenger/imApi/searchMessageLower?groupId=8&m_id=2369",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"searchMessageLower"
+					],
+					"query": [
+						{
+							"key": "groupId",
+							"value": "8"
+						},
+						{
+							"key": "userId",
+							"value": "4",
+							"disabled": true
+						},
+						{
+							"key": "m_id",
+							"value": "2369"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get Message by groupId or user[]",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46MTIzNA==",
+								"warning": ""
+							},
+							{
+								"key": "Authorizationkeyfortoken",
+								"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImJ0WlNtTmZ0YloiLCJpc3N1ZWRBdCI6IjIwMTctMTAtMzFUMTA6Mjg6MzcrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlckVtYWlsIjoic2ltb25AZ21haWwuY29tIiwidXNlcklkIjoiMTAiLCJ1c2VyVHlwZSI6IjEifQ.ig2XjFK9fWPj5QXoM-oc5mRGN10scjEDF3deEl-3Bz4",
+								"warning": ""
+							}
+						],
+						"url": {
+							"raw": "http://localhost/im-messenger/imApi/getMessage?groupId=1&limit=100&start=7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"im-messenger",
+								"imApi",
+								"getMessage"
+							],
+							"query": [
+								{
+									"key": "groupId",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "start",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "cache-control",
+							"value": "no-store, no-cache, must-revalidate",
+							"name": "cache-control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "connection",
+							"value": "Keep-Alive",
+							"name": "connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "content-length",
+							"value": "6526",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "date",
+							"value": "Tue, 31 Oct 2017 11:02:14 GMT",
+							"name": "date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+							"name": "expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5, max=100",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "pragma",
+							"value": "no-cache",
+							"name": "pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "server",
+							"value": "Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9",
+							"name": "server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "PHP/7.1.9",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"body": "{\"status\":{\"code\":200,\"message\":\"Success\"},\"totalMessage\":\"14\",\"response\":[{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"1\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\",\"type\":\"text\",\"link\":\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\\\",\\\"host\\\":\\\"www.youtube.com\\\",\\\"title\\\":\\\"The Kapil Sharma Show - \\u0926\\u0940 \\u0915\\u092a\\u093f\\u0932 \\u0936\\u0930\\u094d\\u092e\\u093e \\u0936\\u094b-Ep-33\\u2013Rustom in Kapil's Mohalla\\u2013 13th Aug 2016\\\",\\\"description\\\":\\\"Bollywood Superstar Akshay Kumar, Ileana D'Cruz, and Esha Gupta are the special guest tonight on \\u2018The Kapil Sharma Show\\u2019. The team of Comedy King Kapil Sharm...\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/www.youtube.com\\/embed\\/irPnf9IX_JE\\\",\\\"type\\\":\\\"player\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:04:02\",\"date_time\":\"2017-10-19 19:04:02\",\"ios_date_time\":\"2017-10-19T19:04:02+0000\"}},{\"sender\":{\"userId\":5,\"firstName\":\"anisul\",\"lastName\":\"hoque\",\"userEmail\":\"anis@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/0611201773348profile.jpg\"},\"message\":{\"m_id\":\"2\",\"sender\":\"5\",\"receiver\":\"1\",\"message\":\"cfcfcfcfc\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:04:37\",\"date_time\":\"2017-10-19 19:04:37\",\"ios_date_time\":\"2017-10-19T19:04:37+0000\"}},{\"sender\":{\"userId\":5,\"firstName\":\"anisul\",\"lastName\":\"hoque\",\"userEmail\":\"anis@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/0611201773348profile.jpg\"},\"message\":{\"m_id\":\"3\",\"sender\":\"5\",\"receiver\":\"1\",\"message\":\"vvxcvxcvxcvxcv\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:05:02\",\"date_time\":\"2017-10-19 19:05:02\",\"ios_date_time\":\"2017-10-19T19:05:02+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"4\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\",\"type\":\"text\",\"link\":\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\\\",\\\"host\\\":\\\"www.google.com.bd\\\",\\\"title\\\":\\\"National Parliament House\\\",\\\"description\\\":\\\"Manik Mia Ave, Dhaka\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/maps.google.com\\/maps\\/api\\/staticmap?center=23.762300984583586%2C90.37656071498157&zoom=16&size=256x256&language=en&markers=23.762300999999997%2C90.37874939999999&sensor=false&client=google-maps-frontend&signature=2wuNbESqzTWJjKvYtMVv9F-4odE\\\",\\\"type\\\":\\\"image\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"08:11:34\",\"date_time\":\"2017-10-20 08:11:34\",\"ios_date_time\":\"2017-10-20T08:11:34+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"6\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\",\"type\":\"text\",\"link\":\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\\\",\\\"host\\\":\\\"github.com\\\",\\\"title\\\":\\\"velocityzen\\/meta-extractor\\\",\\\"description\\\":\\\"meta-extractor - Super simple and fast html page meta data extractor\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/avatars3.githubusercontent.com\\/u\\/451068?s=400&v=4\\\",\\\"type\\\":\\\"image\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"09:08:25\",\"date_time\":\"2017-10-20 09:08:25\",\"ios_date_time\":\"2017-10-20T09:08:25+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"7\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.google.com\\/search?rlz=1C1AVFC_enBD767BD767&amp;q=img-responsive&amp;spell=1&amp;sa=X&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&amp;biw=1366&amp;bih=637\",\"type\":\"text\",\"link\":\"https:\\/\\/www.google.com\\/search?amp;bih=637&amp;biw=1366&amp;q=img-responsive&amp;sa=X&amp;spell=1&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&rlz=1C1AVFC_enBD767BD767\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.google.com\\/search?amp;bih=637&amp;biw=1366&amp;q=img-responsive&amp;sa=X&amp;spell=1&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&rlz=1C1AVFC_enBD767BD767\\\",\\\"host\\\":\\\"www.google.com\\\",\\\"title\\\":\\\"Google\\\",\\\"description\\\":\\\"Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":null,\\\"type\\\":null}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"09:25:45\",\"date_time\":\"2017-10-20 09:25:45\",\"ios_date_time\":\"2017-10-20T09:25:45+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"8\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"\\ud83d\\ude05\\ud83d\\ude1f\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-21\",\"time\":\"04:21:56\",\"date_time\":\"2017-10-21 16:21:56\",\"ios_date_time\":\"2017-10-21T16:21:56+0000\"}}]}"
+				}
+			]
+		},
+		{
+			"name": "searchMessage",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6InVFek9aVXJMM2giLCJpc3N1ZWRBdCI6IjIwMTktMDUtMTlUMTk6MjM6NTMrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlck5hbWUiOiJzaW1vbiAiLCJwcm9maWxlUGljdHVyZSI6Imh0dHA6XC9cL2ltLW1lc3Nlbmdlci50ZXN0XC9hc3NldHNcL3VzZXJJbWFnZVwvMDQxNjIwMTg5MzcxNHByb2ZpbGU0LmpwZyIsInVzZXJFbWFpbCI6InNpbW9uQGdtYWlsLmNvbSIsInVzZXJJZCI6IjQiLCJ1c2VyVHlwZSI6IjEifQ.cCiWsROtnP_5bGZW3yT-gsge5p6AVeJebQk4eGnEMi0"
+					}
+				],
+				"url": {
+					"raw": "https://localhost/im-messenger/imApi/searchMessage?groupId=8&search=asd",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"searchMessage"
+					],
+					"query": [
+						{
+							"key": "groupId",
+							"value": "8"
+						},
+						{
+							"key": "userId",
+							"value": "4",
+							"disabled": true
+						},
+						{
+							"key": "search",
+							"value": "asd"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get Message by groupId or user[]",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46MTIzNA==",
+								"warning": ""
+							},
+							{
+								"key": "Authorizationkeyfortoken",
+								"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImJ0WlNtTmZ0YloiLCJpc3N1ZWRBdCI6IjIwMTctMTAtMzFUMTA6Mjg6MzcrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlckVtYWlsIjoic2ltb25AZ21haWwuY29tIiwidXNlcklkIjoiMTAiLCJ1c2VyVHlwZSI6IjEifQ.ig2XjFK9fWPj5QXoM-oc5mRGN10scjEDF3deEl-3Bz4",
+								"warning": ""
+							}
+						],
+						"url": {
+							"raw": "http://localhost/im-messenger/imApi/getMessage?groupId=1&limit=100&start=7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"im-messenger",
+								"imApi",
+								"getMessage"
+							],
+							"query": [
+								{
+									"key": "groupId",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "start",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "cache-control",
+							"value": "no-store, no-cache, must-revalidate",
+							"name": "cache-control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "connection",
+							"value": "Keep-Alive",
+							"name": "connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "content-length",
+							"value": "6526",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "date",
+							"value": "Tue, 31 Oct 2017 11:02:14 GMT",
+							"name": "date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+							"name": "expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5, max=100",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "pragma",
+							"value": "no-cache",
+							"name": "pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "server",
+							"value": "Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9",
+							"name": "server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "PHP/7.1.9",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"body": "{\"status\":{\"code\":200,\"message\":\"Success\"},\"totalMessage\":\"14\",\"response\":[{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"1\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\",\"type\":\"text\",\"link\":\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\\\",\\\"host\\\":\\\"www.youtube.com\\\",\\\"title\\\":\\\"The Kapil Sharma Show - \\u0926\\u0940 \\u0915\\u092a\\u093f\\u0932 \\u0936\\u0930\\u094d\\u092e\\u093e \\u0936\\u094b-Ep-33\\u2013Rustom in Kapil's Mohalla\\u2013 13th Aug 2016\\\",\\\"description\\\":\\\"Bollywood Superstar Akshay Kumar, Ileana D'Cruz, and Esha Gupta are the special guest tonight on \\u2018The Kapil Sharma Show\\u2019. The team of Comedy King Kapil Sharm...\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/www.youtube.com\\/embed\\/irPnf9IX_JE\\\",\\\"type\\\":\\\"player\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:04:02\",\"date_time\":\"2017-10-19 19:04:02\",\"ios_date_time\":\"2017-10-19T19:04:02+0000\"}},{\"sender\":{\"userId\":5,\"firstName\":\"anisul\",\"lastName\":\"hoque\",\"userEmail\":\"anis@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/0611201773348profile.jpg\"},\"message\":{\"m_id\":\"2\",\"sender\":\"5\",\"receiver\":\"1\",\"message\":\"cfcfcfcfc\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:04:37\",\"date_time\":\"2017-10-19 19:04:37\",\"ios_date_time\":\"2017-10-19T19:04:37+0000\"}},{\"sender\":{\"userId\":5,\"firstName\":\"anisul\",\"lastName\":\"hoque\",\"userEmail\":\"anis@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/0611201773348profile.jpg\"},\"message\":{\"m_id\":\"3\",\"sender\":\"5\",\"receiver\":\"1\",\"message\":\"vvxcvxcvxcvxcv\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:05:02\",\"date_time\":\"2017-10-19 19:05:02\",\"ios_date_time\":\"2017-10-19T19:05:02+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"4\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\",\"type\":\"text\",\"link\":\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\\\",\\\"host\\\":\\\"www.google.com.bd\\\",\\\"title\\\":\\\"National Parliament House\\\",\\\"description\\\":\\\"Manik Mia Ave, Dhaka\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/maps.google.com\\/maps\\/api\\/staticmap?center=23.762300984583586%2C90.37656071498157&zoom=16&size=256x256&language=en&markers=23.762300999999997%2C90.37874939999999&sensor=false&client=google-maps-frontend&signature=2wuNbESqzTWJjKvYtMVv9F-4odE\\\",\\\"type\\\":\\\"image\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"08:11:34\",\"date_time\":\"2017-10-20 08:11:34\",\"ios_date_time\":\"2017-10-20T08:11:34+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"6\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\",\"type\":\"text\",\"link\":\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\\\",\\\"host\\\":\\\"github.com\\\",\\\"title\\\":\\\"velocityzen\\/meta-extractor\\\",\\\"description\\\":\\\"meta-extractor - Super simple and fast html page meta data extractor\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/avatars3.githubusercontent.com\\/u\\/451068?s=400&v=4\\\",\\\"type\\\":\\\"image\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"09:08:25\",\"date_time\":\"2017-10-20 09:08:25\",\"ios_date_time\":\"2017-10-20T09:08:25+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"7\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.google.com\\/search?rlz=1C1AVFC_enBD767BD767&amp;q=img-responsive&amp;spell=1&amp;sa=X&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&amp;biw=1366&amp;bih=637\",\"type\":\"text\",\"link\":\"https:\\/\\/www.google.com\\/search?amp;bih=637&amp;biw=1366&amp;q=img-responsive&amp;sa=X&amp;spell=1&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&rlz=1C1AVFC_enBD767BD767\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.google.com\\/search?amp;bih=637&amp;biw=1366&amp;q=img-responsive&amp;sa=X&amp;spell=1&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&rlz=1C1AVFC_enBD767BD767\\\",\\\"host\\\":\\\"www.google.com\\\",\\\"title\\\":\\\"Google\\\",\\\"description\\\":\\\"Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":null,\\\"type\\\":null}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"09:25:45\",\"date_time\":\"2017-10-20 09:25:45\",\"ios_date_time\":\"2017-10-20T09:25:45+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"8\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"\\ud83d\\ude05\\ud83d\\ude1f\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-21\",\"time\":\"04:21:56\",\"date_time\":\"2017-10-21 16:21:56\",\"ios_date_time\":\"2017-10-21T16:21:56+0000\"}}]}"
+				}
+			]
+		},
+		{
+			"name": "add  new friend",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6IlVuOG81UjMwOTMiLCJpc3N1ZWRBdCI6IjIwMTctMDQtMDVUMTU6MjU6MDMrMDAwMCIsImZpcnN0TmFtZSI6IkZhcmhhZCIsInVzZXJFbWFpbCI6InBvbG9rMDE3MTdAZ21haWwuY29tIiwidXNlcklkIjoiMSIsInVzZXJUeXBlIjoiMSJ9.EuJPSGHVedZscFj4mARHObzrnxgaYouvcwO5c94Po4U"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "friendId",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/im-messenger/imApi/createGroupByMember",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"createGroupByMember"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leave group",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImJ0WlNtTmZ0YloiLCJpc3N1ZWRBdCI6IjIwMTgtMDMtMTBUMDg6NDQ6NDkrMDAwMCIsInVzZXJOYW1lIjoic2ltb24gaGFzYW4iLCJwcm9maWxlUGljdHVyZSI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvaW0tbWVzc2VuZ2VyXC9hc3NldHNcL3VzZXJJbWFnZVwvMTAzMDIwMTc3NTQxNnByb2ZpbGUxMC5qcGciLCJ1c2VyRW1haWwiOiJzaW1vbkBnbWFpbC5jb20iLCJ1c2VySWQiOiIxMCIsInVzZXJUeXBlIjoiMSJ9.XziXsTWd-3YuNhmwV9YMFrzSIrt9n40q0-f2vvW5Cko"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "groupId",
+							"value": "21",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/im-messenger/imApi/leaveGroup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"leaveGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getGroups",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6InVFek9aVXJMM2giLCJpc3N1ZWRBdCI6IjIwMTgtMDctMDNUMTU6MzM6MTErMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlck5hbWUiOiJzaW1vbiAiLCJwcm9maWxlUGljdHVyZSI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvaW0tbWVzc2VuZ2VyXC9hc3NldHNcL3VzZXJJbWFnZVwvMDQxNjIwMTg5MzcxNHByb2ZpbGU0LmpwZyIsInVzZXJFbWFpbCI6InNpbW9uQGdtYWlsLmNvbSIsInVzZXJJZCI6IjQiLCJ1c2VyVHlwZSI6IjEifQ.iuPD6s44gcya4G7iry-pJAfrDpo7FZbay6npQdLhJAo"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/im-messenger/imApi/getGroups?limit=10&start=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"getGroups"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "start",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUnreadMessageGroups",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImZYNW1IR0Q3VVciLCJpc3N1ZWRBdCI6IjIwMTgtMDctMDhUMTU6MDE6NDgrMDAwMCIsImZpcnN0TmFtZSI6ImFuaXN1bCIsInVzZXJOYW1lIjoiYW5pc3VsIGhvc2FpbiIsInByb2ZpbGVQaWN0dXJlIjoiaHR0cDpcL1wvbG9jYWxob3N0XC9pbS1tZXNzZW5nZXJcL2Fzc2V0c1wvdXNlckltYWdlXC8wNDE0MjAxODE1MTIyOHByb2ZpbGU1LmpwZyIsInVzZXJFbWFpbCI6ImFuaXNAZ21haWwuY29tIiwidXNlcklkIjoiNSIsInVzZXJUeXBlIjoiMSJ9.PN3uA6hpmYMpKK7644L9hCoqWW8TfZMoYKA5aVEIKj8"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/im-messenger/imApi/getUnreadMessageGroups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"getUnreadMessageGroups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6InVFek9aVXJMM2giLCJpc3N1ZWRBdCI6IjIwMTgtMDctMDdUMTk6MTU6MTYrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlck5hbWUiOiJzaW1vbiAiLCJwcm9maWxlUGljdHVyZSI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvaW0tbWVzc2VuZ2VyXC9hc3NldHNcL3VzZXJJbWFnZVwvMDQxNjIwMTg5MzcxNHByb2ZpbGU0LmpwZyIsInVzZXJFbWFpbCI6InNpbW9uQGdtYWlsLmNvbSIsInVzZXJJZCI6IjQiLCJ1c2VyVHlwZSI6IjEifQ.Dj0CxXLbPNNncx6b6so4WV0SAsZxHAaVaO7rDqr92xI"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "groupId",
+							"value": "110",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "message",
+							"value": "i am",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"value": "",
+							"type": "file",
+							"disabled": true
+						},
+						{
+							"key": "memberId[]",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/im-messenger/imApi/sendMessage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"sendMessage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create groupe by member",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6IlVuOG81UjMwOTMiLCJpc3N1ZWRBdCI6IjIwMTctMDQtMDVUMTU6MjU6MDMrMDAwMCIsImZpcnN0TmFtZSI6IkZhcmhhZCIsInVzZXJFbWFpbCI6InBvbG9rMDE3MTdAZ21haWwuY29tIiwidXNlcklkIjoiMSIsInVzZXJUeXBlIjoiMSJ9.EuJPSGHVedZscFj4mARHObzrnxgaYouvcwO5c94Po4U"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "memberId[]",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "memberId[]",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "memberId[]",
+							"value": "6",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "g_name",
+							"value": "\"\"",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/im_messenger/imApi/createGroupByMember",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im_messenger",
+						"imApi",
+						"createGroupByMember"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user profile pic upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6IlVuOG81UjMwOTMiLCJpc3N1ZWRBdCI6IjIwMTctMDQtMDVUMTU6MjU6MDMrMDAwMCIsImZpcnN0TmFtZSI6IkZhcmhhZCIsInVzZXJFbWFpbCI6InBvbG9rMDE3MTdAZ21haWwuY29tIiwidXNlcklkIjoiMSIsInVzZXJUeXBlIjoiMSJ9.EuJPSGHVedZscFj4mARHObzrnxgaYouvcwO5c94Po4U"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/im_messenger/user/profilePictureUpload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im_messenger",
+						"user",
+						"profilePictureUpload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userEmail",
+							"value": "anis@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "userPassword",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "Mohammad",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "lastName",
+							"value": "Shawn",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/im-messenger/registration/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"registration",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Member",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6InVFek9aVXJMM2giLCJpc3N1ZWRBdCI6IjIwMTgtMDYtMDZUMDI6MDk6MjMrMDAwMCIsImZpcnN0TmFtZSI6Ilx1MDYzNFx1MDYzM1x1MDY0YSIsInVzZXJOYW1lIjoiXHUwNjM0XHUwNjMzXHUwNjRhIHNpbW9uIiwicHJvZmlsZVBpY3R1cmUiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2ltLW1lc3NlbmdlclwvYXNzZXRzXC91c2VySW1hZ2VcLzA0MTYyMDE4OTM3MTRwcm9maWxlNC5qcGciLCJ1c2VyRW1haWwiOiJzaW1vbkBnbWFpbC5jb20iLCJ1c2VySWQiOiI0IiwidXNlclR5cGUiOiIxIn0.6IQzhcoFVNSVsJEoIqs5kr2fGd4W47Sh04EyBOopeew"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "groupId",
+							"value": "132",
+							"type": "text"
+						},
+						{
+							"key": "memberId",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2017-12-28",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "time",
+							"value": "23:24:39",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/im-messenger/imApi/deleteMember",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"deleteMember"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get friend list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImJ0WlNtTmZ0YloiLCJpc3N1ZWRBdCI6IjIwMTgtMDEtMjlUMTE6MzM6MDYrMDAwMCIsInVzZXJOYW1lIjoic2ltb24gaGFzYW4iLCJwcm9maWxlUGljdHVyZSI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvaW0tbWVzc2VuZ2VyXC9hc3NldHNcL3VzZXJJbWFnZVwvMTAzMDIwMTc3NTQxNnByb2ZpbGUxMC5qcGciLCJ1c2VyRW1haWwiOiJzaW1vbkBnbWFpbC5jb20iLCJ1c2VySWQiOiIxMCIsInVzZXJUeXBlIjoiMSJ9.ii91R1_j7j62eiOws-rxIAtaLQlYrN7khSOikTvA_no"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/im-messenger/user/friendList?limit=10&start=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"user",
+						"friendList"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "start",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change group Name",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6IlVuOG81UjMwOTMiLCJpc3N1ZWRBdCI6IjIwMTctMDQtMDVUMTU6MjU6MDMrMDAwMCIsImZpcnN0TmFtZSI6IkZhcmhhZCIsInVzZXJFbWFpbCI6InBvbG9rMDE3MTdAZ21haWwuY29tIiwidXNlcklkIjoiMSIsInVzZXJUeXBlIjoiMSJ9.EuJPSGHVedZscFj4mARHObzrnxgaYouvcwO5c94Po4U"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "groupId",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "groupName",
+							"value": "''",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"value": "",
+							"type": "file",
+							"disabled": true
+						},
+						{
+							"key": "time",
+							"value": "20:37:36",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "date",
+							"value": "2017-02-14",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/im_messenger/imApi/changeGroupName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im_messenger",
+						"imApi",
+						"changeGroupName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Message by groupId or user[]",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6IlVuOG81UjMwOTMiLCJpc3N1ZWRBdCI6IjIwMTctMDQtMDVUMTU6MjU6MDMrMDAwMCIsImZpcnN0TmFtZSI6IkZhcmhhZCIsInVzZXJFbWFpbCI6InBvbG9rMDE3MTdAZ21haWwuY29tIiwidXNlcklkIjoiMSIsInVzZXJUeXBlIjoiMSJ9.EuJPSGHVedZscFj4mARHObzrnxgaYouvcwO5c94Po4U"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/im_messenger/imApi/getMessage?groupId=22&limit=10&start=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im_messenger",
+						"imApi",
+						"getMessage"
+					],
+					"query": [
+						{
+							"key": "groupId",
+							"value": "22"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "start",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get Message by groupId or user[]",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46MTIzNA==",
+								"warning": ""
+							},
+							{
+								"key": "Authorizationkeyfortoken",
+								"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImJ0WlNtTmZ0YloiLCJpc3N1ZWRBdCI6IjIwMTctMTAtMzFUMTA6Mjg6MzcrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlckVtYWlsIjoic2ltb25AZ21haWwuY29tIiwidXNlcklkIjoiMTAiLCJ1c2VyVHlwZSI6IjEifQ.ig2XjFK9fWPj5QXoM-oc5mRGN10scjEDF3deEl-3Bz4",
+								"warning": ""
+							}
+						],
+						"url": {
+							"raw": "http://localhost/im-messenger/imApi/getMessage?groupId=1&limit=100&start=7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"im-messenger",
+								"imApi",
+								"getMessage"
+							],
+							"query": [
+								{
+									"key": "groupId",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "start",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "cache-control",
+							"value": "no-store, no-cache, must-revalidate",
+							"name": "cache-control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "connection",
+							"value": "Keep-Alive",
+							"name": "connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "content-length",
+							"value": "6526",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "date",
+							"value": "Tue, 31 Oct 2017 11:02:14 GMT",
+							"name": "date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+							"name": "expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5, max=100",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "pragma",
+							"value": "no-cache",
+							"name": "pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "server",
+							"value": "Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9",
+							"name": "server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "PHP/7.1.9",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"body": "{\"status\":{\"code\":200,\"message\":\"Success\"},\"totalMessage\":\"14\",\"response\":[{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"1\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\",\"type\":\"text\",\"link\":\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\\\",\\\"host\\\":\\\"www.youtube.com\\\",\\\"title\\\":\\\"The Kapil Sharma Show - \\u0926\\u0940 \\u0915\\u092a\\u093f\\u0932 \\u0936\\u0930\\u094d\\u092e\\u093e \\u0936\\u094b-Ep-33\\u2013Rustom in Kapil's Mohalla\\u2013 13th Aug 2016\\\",\\\"description\\\":\\\"Bollywood Superstar Akshay Kumar, Ileana D'Cruz, and Esha Gupta are the special guest tonight on \\u2018The Kapil Sharma Show\\u2019. The team of Comedy King Kapil Sharm...\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/www.youtube.com\\/embed\\/irPnf9IX_JE\\\",\\\"type\\\":\\\"player\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:04:02\",\"date_time\":\"2017-10-19 19:04:02\",\"ios_date_time\":\"2017-10-19T19:04:02+0000\"}},{\"sender\":{\"userId\":5,\"firstName\":\"anisul\",\"lastName\":\"hoque\",\"userEmail\":\"anis@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/0611201773348profile.jpg\"},\"message\":{\"m_id\":\"2\",\"sender\":\"5\",\"receiver\":\"1\",\"message\":\"cfcfcfcfc\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:04:37\",\"date_time\":\"2017-10-19 19:04:37\",\"ios_date_time\":\"2017-10-19T19:04:37+0000\"}},{\"sender\":{\"userId\":5,\"firstName\":\"anisul\",\"lastName\":\"hoque\",\"userEmail\":\"anis@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/0611201773348profile.jpg\"},\"message\":{\"m_id\":\"3\",\"sender\":\"5\",\"receiver\":\"1\",\"message\":\"vvxcvxcvxcvxcv\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:05:02\",\"date_time\":\"2017-10-19 19:05:02\",\"ios_date_time\":\"2017-10-19T19:05:02+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"4\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\",\"type\":\"text\",\"link\":\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\\\",\\\"host\\\":\\\"www.google.com.bd\\\",\\\"title\\\":\\\"National Parliament House\\\",\\\"description\\\":\\\"Manik Mia Ave, Dhaka\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/maps.google.com\\/maps\\/api\\/staticmap?center=23.762300984583586%2C90.37656071498157&zoom=16&size=256x256&language=en&markers=23.762300999999997%2C90.37874939999999&sensor=false&client=google-maps-frontend&signature=2wuNbESqzTWJjKvYtMVv9F-4odE\\\",\\\"type\\\":\\\"image\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"08:11:34\",\"date_time\":\"2017-10-20 08:11:34\",\"ios_date_time\":\"2017-10-20T08:11:34+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"6\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\",\"type\":\"text\",\"link\":\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\\\",\\\"host\\\":\\\"github.com\\\",\\\"title\\\":\\\"velocityzen\\/meta-extractor\\\",\\\"description\\\":\\\"meta-extractor - Super simple and fast html page meta data extractor\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/avatars3.githubusercontent.com\\/u\\/451068?s=400&v=4\\\",\\\"type\\\":\\\"image\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"09:08:25\",\"date_time\":\"2017-10-20 09:08:25\",\"ios_date_time\":\"2017-10-20T09:08:25+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"7\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.google.com\\/search?rlz=1C1AVFC_enBD767BD767&amp;q=img-responsive&amp;spell=1&amp;sa=X&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&amp;biw=1366&amp;bih=637\",\"type\":\"text\",\"link\":\"https:\\/\\/www.google.com\\/search?amp;bih=637&amp;biw=1366&amp;q=img-responsive&amp;sa=X&amp;spell=1&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&rlz=1C1AVFC_enBD767BD767\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.google.com\\/search?amp;bih=637&amp;biw=1366&amp;q=img-responsive&amp;sa=X&amp;spell=1&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&rlz=1C1AVFC_enBD767BD767\\\",\\\"host\\\":\\\"www.google.com\\\",\\\"title\\\":\\\"Google\\\",\\\"description\\\":\\\"Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":null,\\\"type\\\":null}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"09:25:45\",\"date_time\":\"2017-10-20 09:25:45\",\"ios_date_time\":\"2017-10-20T09:25:45+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"8\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"\\ud83d\\ude05\\ud83d\\ude1f\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-21\",\"time\":\"04:21:56\",\"date_time\":\"2017-10-21 16:21:56\",\"ios_date_time\":\"2017-10-21T16:21:56+0000\"}}]}"
+				}
+			]
+		},
+		{
+			"name": "get members by group",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6InVFek9aVXJMM2giLCJpc3N1ZWRBdCI6IjIwMTgtMDctMDNUMTU6MzM6MTErMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlck5hbWUiOiJzaW1vbiAiLCJwcm9maWxlUGljdHVyZSI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvaW0tbWVzc2VuZ2VyXC9hc3NldHNcL3VzZXJJbWFnZVwvMDQxNjIwMTg5MzcxNHByb2ZpbGU0LmpwZyIsInVzZXJFbWFpbCI6InNpbW9uQGdtYWlsLmNvbSIsInVzZXJJZCI6IjQiLCJ1c2VyVHlwZSI6IjEifQ.iuPD6s44gcya4G7iry-pJAfrDpo7FZbay6npQdLhJAo"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/im-messenger/imApi/getMembers?groupId=110",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"getMembers"
+					],
+					"query": [
+						{
+							"key": "groupId",
+							"value": "110"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get files by group",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6InVFek9aVXJMM2giLCJpc3N1ZWRBdCI6IjIwMTgtMDctMDNUMTU6MzM6MTErMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlck5hbWUiOiJzaW1vbiAiLCJwcm9maWxlUGljdHVyZSI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvaW0tbWVzc2VuZ2VyXC9hc3NldHNcL3VzZXJJbWFnZVwvMDQxNjIwMTg5MzcxNHByb2ZpbGU0LmpwZyIsInVzZXJFbWFpbCI6InNpbW9uQGdtYWlsLmNvbSIsInVzZXJJZCI6IjQiLCJ1c2VyVHlwZSI6IjEifQ.iuPD6s44gcya4G7iry-pJAfrDpo7FZbay6npQdLhJAo"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/im-messenger/imApi/getGroupFiles?groupId=133",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"getGroupFiles"
+					],
+					"query": [
+						{
+							"key": "groupId",
+							"value": "133"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Member",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6IlVuOG81UjMwOTMiLCJpc3N1ZWRBdCI6IjIwMTctMDQtMDVUMTU6MjU6MDMrMDAwMCIsImZpcnN0TmFtZSI6IkZhcmhhZCIsInVzZXJFbWFpbCI6InBvbG9rMDE3MTdAZ21haWwuY29tIiwidXNlcklkIjoiMSIsInVzZXJUeXBlIjoiMSJ9.EuJPSGHVedZscFj4mARHObzrnxgaYouvcwO5c94Po4U"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "groupId",
+							"value": "16",
+							"type": "text"
+						},
+						{
+							"key": "userId[]",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2017-12-28",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "time",
+							"value": "23:24:39",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "userId[]",
+							"value": "4",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/im_messenger/imApi/addGroupMember",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im_messenger",
+						"imApi",
+						"addGroupMember"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get filter friend list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImJ0WlNtTmZ0YloiLCJpc3N1ZWRBdCI6IjIwMTgtMDEtMjlUMTE6MzM6MDYrMDAwMCIsInVzZXJOYW1lIjoic2ltb24gaGFzYW4iLCJwcm9maWxlUGljdHVyZSI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvaW0tbWVzc2VuZ2VyXC9hc3NldHNcL3VzZXJJbWFnZVwvMTAzMDIwMTc3NTQxNnByb2ZpbGUxMC5qcGciLCJ1c2VyRW1haWwiOiJzaW1vbkBnbWFpbC5jb20iLCJ1c2VySWQiOiIxMCIsInVzZXJUeXBlIjoiMSJ9.ii91R1_j7j62eiOws-rxIAtaLQlYrN7khSOikTvA_no"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/im-messenger/user/filterFriendList?key=sim",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"user",
+						"filterFriendList"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "sim"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6IkF6c3dkeFpPdWciLCJpc3N1ZWRBdCI6IjIwMTYtMTItMzFUMDE6MDI6MDcrMDAwMCIsImZpcnN0TmFtZSI6Ik1vaGFtbWFkIiwidXNlckVtYWlsIjoic2hhd25AZ21haWwuY29tIiwidXNlcklkIjoiMSJ9.8FwUIv-c3afJfzkMEx9EpomaOLzIT-XfjCrzgmV7gI0"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userEmail",
+							"value": "shawn000123@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "userPassword",
+							"value": "am12345678",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "Mohammad",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Shawn",
+							"type": "text"
+						},
+						{
+							"key": "userToken",
+							"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImhXWEhTOFd6VWwiLCJpc3N1ZWRBdCI6IjIwMTYtMTItMzBUMDQ6NDQ6NTcrMDAwMCIsImZpcnN0TmFtZSI6Ik1vaGFtbWFkIiwidXNlckVtYWlsIjoic2hhd24wMDAxMkBnbWFpbC5jb20iLCJ1c2VySWQiOiI2In0.DWRF3dJzkoy06fKX4oHAR3t1VWwtJrTXU3HwZeS9tps",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "userType",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "userAddress",
+							"value": "high level Road",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/im_messenger/registration/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im_messenger",
+						"registration",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "block Message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImJ0WlNtTmZ0YloiLCJpc3N1ZWRBdCI6IjIwMTgtMDMtMTBUMDg6NDQ6NDkrMDAwMCIsInVzZXJOYW1lIjoic2ltb24gaGFzYW4iLCJwcm9maWxlUGljdHVyZSI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvaW0tbWVzc2VuZ2VyXC9hc3NldHNcL3VzZXJJbWFnZVwvMTAzMDIwMTc3NTQxNnByb2ZpbGUxMC5qcGciLCJ1c2VyRW1haWwiOiJzaW1vbkBnbWFpbC5jb20iLCJ1c2VySWQiOiIxMCIsInVzZXJUeXBlIjoiMSJ9.XziXsTWd-3YuNhmwV9YMFrzSIrt9n40q0-f2vvW5Cko",
+						"description": "Simon"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "groupId",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/im-messenger/imApi/blockGroup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"blockGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unblock Message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImJ0WlNtTmZ0YloiLCJpc3N1ZWRBdCI6IjIwMTgtMDMtMTBUMDg6NDQ6NDkrMDAwMCIsInVzZXJOYW1lIjoic2ltb24gaGFzYW4iLCJwcm9maWxlUGljdHVyZSI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvaW0tbWVzc2VuZ2VyXC9hc3NldHNcL3VzZXJJbWFnZVwvMTAzMDIwMTc3NTQxNnByb2ZpbGUxMC5qcGciLCJ1c2VyRW1haWwiOiJzaW1vbkBnbWFpbC5jb20iLCJ1c2VySWQiOiIxMCIsInVzZXJUeXBlIjoiMSJ9.XziXsTWd-3YuNhmwV9YMFrzSIrt9n40q0-f2vvW5Cko",
+						"description": "simon"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "groupId",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/im-messenger/imApi/unblockGroup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"unblockGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mute Message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImJ0WlNtTmZ0YloiLCJpc3N1ZWRBdCI6IjIwMTgtMDMtMTBUMDg6NDQ6NDkrMDAwMCIsInVzZXJOYW1lIjoic2ltb24gaGFzYW4iLCJwcm9maWxlUGljdHVyZSI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvaW0tbWVzc2VuZ2VyXC9hc3NldHNcL3VzZXJJbWFnZVwvMTAzMDIwMTc3NTQxNnByb2ZpbGUxMC5qcGciLCJ1c2VyRW1haWwiOiJzaW1vbkBnbWFpbC5jb20iLCJ1c2VySWQiOiIxMCIsInVzZXJUeXBlIjoiMSJ9.XziXsTWd-3YuNhmwV9YMFrzSIrt9n40q0-f2vvW5Cko"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "groupId",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/im-messenger/imApi/muteGroup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"muteGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unmute Message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImJ0WlNtTmZ0YloiLCJpc3N1ZWRBdCI6IjIwMTgtMDMtMTBUMDg6NDQ6NDkrMDAwMCIsInVzZXJOYW1lIjoic2ltb24gaGFzYW4iLCJwcm9maWxlUGljdHVyZSI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvaW0tbWVzc2VuZ2VyXC9hc3NldHNcL3VzZXJJbWFnZVwvMTAzMDIwMTc3NTQxNnByb2ZpbGUxMC5qcGciLCJ1c2VyRW1haWwiOiJzaW1vbkBnbWFpbC5jb20iLCJ1c2VySWQiOiIxMCIsInVzZXJUeXBlIjoiMSJ9.XziXsTWd-3YuNhmwV9YMFrzSIrt9n40q0-f2vvW5Cko"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "groupId",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/im-messenger/imApi/unmuteGroup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"unmuteGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "block Message Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImZYNW1IR0Q3VVciLCJpc3N1ZWRBdCI6IjIwMTgtMDMtMTBUMTg6NTY6NTArMDAwMCIsInVzZXJOYW1lIjoiYW5pc3VsIGhvcXVlIiwicHJvZmlsZVBpY3R1cmUiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2ltLW1lc3NlbmdlclwvYXNzZXRzXC91c2VySW1hZ2VcLzAyMTAyMDE4MjEyMzQ0cHJvZmlsZTUuanBnIiwidXNlckVtYWlsIjoiYW5pc0BnbWFpbC5jb20iLCJ1c2VySWQiOiI1IiwidXNlclR5cGUiOiIxIn0.97LP73aWBFC7CRiUipgkVsOhqduzGlKaahPyfuZ84LI",
+						"description": "Anis"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "groupId",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/im-messenger/imApi/blockGroup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"blockGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unblock Message Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImZYNW1IR0Q3VVciLCJpc3N1ZWRBdCI6IjIwMTgtMDMtMTBUMTg6NTY6NTArMDAwMCIsInVzZXJOYW1lIjoiYW5pc3VsIGhvcXVlIiwicHJvZmlsZVBpY3R1cmUiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2ltLW1lc3NlbmdlclwvYXNzZXRzXC91c2VySW1hZ2VcLzAyMTAyMDE4MjEyMzQ0cHJvZmlsZTUuanBnIiwidXNlckVtYWlsIjoiYW5pc0BnbWFpbC5jb20iLCJ1c2VySWQiOiI1IiwidXNlclR5cGUiOiIxIn0.97LP73aWBFC7CRiUipgkVsOhqduzGlKaahPyfuZ84LI",
+						"description": "Anis"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "groupId",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/im-messenger/imApi/unblockGroup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"unblockGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getGroups Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImZYNW1IR0Q3VVciLCJpc3N1ZWRBdCI6IjIwMTgtMDMtMTBUMTg6NTY6NTArMDAwMCIsInVzZXJOYW1lIjoiYW5pc3VsIGhvcXVlIiwicHJvZmlsZVBpY3R1cmUiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2ltLW1lc3NlbmdlclwvYXNzZXRzXC91c2VySW1hZ2VcLzAyMTAyMDE4MjEyMzQ0cHJvZmlsZTUuanBnIiwidXNlckVtYWlsIjoiYW5pc0BnbWFpbC5jb20iLCJ1c2VySWQiOiI1IiwidXNlclR5cGUiOiIxIn0.97LP73aWBFC7CRiUipgkVsOhqduzGlKaahPyfuZ84LI",
+						"description": "anis"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/im-messenger/imApi/getGroups?limit=10&start=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"getGroups"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "start",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "block list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImJ0WlNtTmZ0YloiLCJpc3N1ZWRBdCI6IjIwMTgtMDMtMTBUMDg6NDQ6NDkrMDAwMCIsInVzZXJOYW1lIjoic2ltb24gaGFzYW4iLCJwcm9maWxlUGljdHVyZSI6Imh0dHA6XC9cL2xvY2FsaG9zdFwvaW0tbWVzc2VuZ2VyXC9hc3NldHNcL3VzZXJJbWFnZVwvMTAzMDIwMTc3NTQxNnByb2ZpbGUxMC5qcGciLCJ1c2VyRW1haWwiOiJzaW1vbkBnbWFpbC5jb20iLCJ1c2VySWQiOiIxMCIsInVzZXJUeXBlIjoiMSJ9.XziXsTWd-3YuNhmwV9YMFrzSIrt9n40q0-f2vvW5Cko",
+						"description": "Simon"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "groupId",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/im-messenger/imApi/getBlockList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"getBlockList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Message by groupId or user[] Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6InVFek9aVXJMM2giLCJpc3N1ZWRBdCI6IjIwMTgtMDMtMTJUMDk6NDM6MjUrMDAwMCIsImZpcnN0TmFtZSI6IlNhaW1vbiIsInVzZXJOYW1lIjoiU2FpbW9uIEhhc2FuIiwicHJvZmlsZVBpY3R1cmUiOiJodHRwczpcL1wvcG5vZGUueHl6XC9pbS1tZXNzZW5nZXJcL2Fzc2V0c1wvdXNlckltYWdlXC8wMzEyMjAxODY0NTMycHJvZmlsZTQuanBnIiwidXNlckVtYWlsIjoic2ltb25AZ21haWwuY29tIiwidXNlcklkIjoiNCIsInVzZXJUeXBlIjoiMSJ9.NI734f-V74YmHavIu4tLbVEyTE_wNnksC9WeEsP9uZE"
+					}
+				],
+				"url": {
+					"raw": "https://pnode.xyz/im-messenger/imApi/getMessage?groupId=8&limit=10&start=0",
+					"protocol": "https",
+					"host": [
+						"pnode",
+						"xyz"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"getMessage"
+					],
+					"query": [
+						{
+							"key": "groupId",
+							"value": "8"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "start",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get Message by groupId or user[]",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46MTIzNA==",
+								"warning": ""
+							},
+							{
+								"key": "Authorizationkeyfortoken",
+								"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImJ0WlNtTmZ0YloiLCJpc3N1ZWRBdCI6IjIwMTctMTAtMzFUMTA6Mjg6MzcrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlckVtYWlsIjoic2ltb25AZ21haWwuY29tIiwidXNlcklkIjoiMTAiLCJ1c2VyVHlwZSI6IjEifQ.ig2XjFK9fWPj5QXoM-oc5mRGN10scjEDF3deEl-3Bz4",
+								"warning": ""
+							}
+						],
+						"url": {
+							"raw": "http://localhost/im-messenger/imApi/getMessage?groupId=1&limit=100&start=7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"im-messenger",
+								"imApi",
+								"getMessage"
+							],
+							"query": [
+								{
+									"key": "groupId",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "start",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "cache-control",
+							"value": "no-store, no-cache, must-revalidate",
+							"name": "cache-control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "connection",
+							"value": "Keep-Alive",
+							"name": "connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "content-length",
+							"value": "6526",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "date",
+							"value": "Tue, 31 Oct 2017 11:02:14 GMT",
+							"name": "date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+							"name": "expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5, max=100",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "pragma",
+							"value": "no-cache",
+							"name": "pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "server",
+							"value": "Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9",
+							"name": "server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "PHP/7.1.9",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"body": "{\"status\":{\"code\":200,\"message\":\"Success\"},\"totalMessage\":\"14\",\"response\":[{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"1\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\",\"type\":\"text\",\"link\":\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\\\",\\\"host\\\":\\\"www.youtube.com\\\",\\\"title\\\":\\\"The Kapil Sharma Show - \\u0926\\u0940 \\u0915\\u092a\\u093f\\u0932 \\u0936\\u0930\\u094d\\u092e\\u093e \\u0936\\u094b-Ep-33\\u2013Rustom in Kapil's Mohalla\\u2013 13th Aug 2016\\\",\\\"description\\\":\\\"Bollywood Superstar Akshay Kumar, Ileana D'Cruz, and Esha Gupta are the special guest tonight on \\u2018The Kapil Sharma Show\\u2019. The team of Comedy King Kapil Sharm...\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/www.youtube.com\\/embed\\/irPnf9IX_JE\\\",\\\"type\\\":\\\"player\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:04:02\",\"date_time\":\"2017-10-19 19:04:02\",\"ios_date_time\":\"2017-10-19T19:04:02+0000\"}},{\"sender\":{\"userId\":5,\"firstName\":\"anisul\",\"lastName\":\"hoque\",\"userEmail\":\"anis@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/0611201773348profile.jpg\"},\"message\":{\"m_id\":\"2\",\"sender\":\"5\",\"receiver\":\"1\",\"message\":\"cfcfcfcfc\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:04:37\",\"date_time\":\"2017-10-19 19:04:37\",\"ios_date_time\":\"2017-10-19T19:04:37+0000\"}},{\"sender\":{\"userId\":5,\"firstName\":\"anisul\",\"lastName\":\"hoque\",\"userEmail\":\"anis@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/0611201773348profile.jpg\"},\"message\":{\"m_id\":\"3\",\"sender\":\"5\",\"receiver\":\"1\",\"message\":\"vvxcvxcvxcvxcv\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:05:02\",\"date_time\":\"2017-10-19 19:05:02\",\"ios_date_time\":\"2017-10-19T19:05:02+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"4\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\",\"type\":\"text\",\"link\":\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\\\",\\\"host\\\":\\\"www.google.com.bd\\\",\\\"title\\\":\\\"National Parliament House\\\",\\\"description\\\":\\\"Manik Mia Ave, Dhaka\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/maps.google.com\\/maps\\/api\\/staticmap?center=23.762300984583586%2C90.37656071498157&zoom=16&size=256x256&language=en&markers=23.762300999999997%2C90.37874939999999&sensor=false&client=google-maps-frontend&signature=2wuNbESqzTWJjKvYtMVv9F-4odE\\\",\\\"type\\\":\\\"image\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"08:11:34\",\"date_time\":\"2017-10-20 08:11:34\",\"ios_date_time\":\"2017-10-20T08:11:34+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"6\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\",\"type\":\"text\",\"link\":\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\\\",\\\"host\\\":\\\"github.com\\\",\\\"title\\\":\\\"velocityzen\\/meta-extractor\\\",\\\"description\\\":\\\"meta-extractor - Super simple and fast html page meta data extractor\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/avatars3.githubusercontent.com\\/u\\/451068?s=400&v=4\\\",\\\"type\\\":\\\"image\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"09:08:25\",\"date_time\":\"2017-10-20 09:08:25\",\"ios_date_time\":\"2017-10-20T09:08:25+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"7\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.google.com\\/search?rlz=1C1AVFC_enBD767BD767&amp;q=img-responsive&amp;spell=1&amp;sa=X&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&amp;biw=1366&amp;bih=637\",\"type\":\"text\",\"link\":\"https:\\/\\/www.google.com\\/search?amp;bih=637&amp;biw=1366&amp;q=img-responsive&amp;sa=X&amp;spell=1&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&rlz=1C1AVFC_enBD767BD767\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.google.com\\/search?amp;bih=637&amp;biw=1366&amp;q=img-responsive&amp;sa=X&amp;spell=1&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&rlz=1C1AVFC_enBD767BD767\\\",\\\"host\\\":\\\"www.google.com\\\",\\\"title\\\":\\\"Google\\\",\\\"description\\\":\\\"Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":null,\\\"type\\\":null}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"09:25:45\",\"date_time\":\"2017-10-20 09:25:45\",\"ios_date_time\":\"2017-10-20T09:25:45+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"8\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"\\ud83d\\ude05\\ud83d\\ude1f\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-21\",\"time\":\"04:21:56\",\"date_time\":\"2017-10-21 16:21:56\",\"ios_date_time\":\"2017-10-21T16:21:56+0000\"}}]}"
+				}
+			]
+		},
+		{
+			"name": "searchMessageUpper",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNA=="
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6InVFek9aVXJMM2giLCJpc3N1ZWRBdCI6IjIwMTktMDUtMTlUMTk6MjM6NTMrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlck5hbWUiOiJzaW1vbiAiLCJwcm9maWxlUGljdHVyZSI6Imh0dHA6XC9cL2ltLW1lc3Nlbmdlci50ZXN0XC9hc3NldHNcL3VzZXJJbWFnZVwvMDQxNjIwMTg5MzcxNHByb2ZpbGU0LmpwZyIsInVzZXJFbWFpbCI6InNpbW9uQGdtYWlsLmNvbSIsInVzZXJJZCI6IjQiLCJ1c2VyVHlwZSI6IjEifQ.cCiWsROtnP_5bGZW3yT-gsge5p6AVeJebQk4eGnEMi0"
+					}
+				],
+				"url": {
+					"raw": "https://localhost/im-messenger/imApi/searchMessageUpper?groupId=8&m_id=2355",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"im-messenger",
+						"imApi",
+						"searchMessageUpper"
+					],
+					"query": [
+						{
+							"key": "groupId",
+							"value": "8"
+						},
+						{
+							"key": "userId",
+							"value": "4",
+							"disabled": true
+						},
+						{
+							"key": "m_id",
+							"value": "2355"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get Message by groupId or user[]",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW46MTIzNA==",
+								"warning": ""
+							},
+							{
+								"key": "Authorizationkeyfortoken",
+								"value": "eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJjb25zdW1lcktleSI6ImJ0WlNtTmZ0YloiLCJpc3N1ZWRBdCI6IjIwMTctMTAtMzFUMTA6Mjg6MzcrMDAwMCIsImZpcnN0TmFtZSI6InNpbW9uIiwidXNlckVtYWlsIjoic2ltb25AZ21haWwuY29tIiwidXNlcklkIjoiMTAiLCJ1c2VyVHlwZSI6IjEifQ.ig2XjFK9fWPj5QXoM-oc5mRGN10scjEDF3deEl-3Bz4",
+								"warning": ""
+							}
+						],
+						"url": {
+							"raw": "http://localhost/im-messenger/imApi/getMessage?groupId=1&limit=100&start=7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"im-messenger",
+								"imApi",
+								"getMessage"
+							],
+							"query": [
+								{
+									"key": "groupId",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "start",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "cache-control",
+							"value": "no-store, no-cache, must-revalidate",
+							"name": "cache-control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "connection",
+							"value": "Keep-Alive",
+							"name": "connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "content-length",
+							"value": "6526",
+							"name": "content-length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"name": "content-type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "date",
+							"value": "Tue, 31 Oct 2017 11:02:14 GMT",
+							"name": "date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+							"name": "expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "keep-alive",
+							"value": "timeout=5, max=100",
+							"name": "keep-alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "pragma",
+							"value": "no-cache",
+							"name": "pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "server",
+							"value": "Apache/2.4.27 (Win32) OpenSSL/1.0.2l PHP/7.1.9",
+							"name": "server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "PHP/7.1.9",
+							"name": "x-powered-by",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"body": "{\"status\":{\"code\":200,\"message\":\"Success\"},\"totalMessage\":\"14\",\"response\":[{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"1\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\",\"type\":\"text\",\"link\":\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.youtube.com\\/watch?v=irPnf9IX_JE\\\",\\\"host\\\":\\\"www.youtube.com\\\",\\\"title\\\":\\\"The Kapil Sharma Show - \\u0926\\u0940 \\u0915\\u092a\\u093f\\u0932 \\u0936\\u0930\\u094d\\u092e\\u093e \\u0936\\u094b-Ep-33\\u2013Rustom in Kapil's Mohalla\\u2013 13th Aug 2016\\\",\\\"description\\\":\\\"Bollywood Superstar Akshay Kumar, Ileana D'Cruz, and Esha Gupta are the special guest tonight on \\u2018The Kapil Sharma Show\\u2019. The team of Comedy King Kapil Sharm...\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/www.youtube.com\\/embed\\/irPnf9IX_JE\\\",\\\"type\\\":\\\"player\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:04:02\",\"date_time\":\"2017-10-19 19:04:02\",\"ios_date_time\":\"2017-10-19T19:04:02+0000\"}},{\"sender\":{\"userId\":5,\"firstName\":\"anisul\",\"lastName\":\"hoque\",\"userEmail\":\"anis@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/0611201773348profile.jpg\"},\"message\":{\"m_id\":\"2\",\"sender\":\"5\",\"receiver\":\"1\",\"message\":\"cfcfcfcfc\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:04:37\",\"date_time\":\"2017-10-19 19:04:37\",\"ios_date_time\":\"2017-10-19T19:04:37+0000\"}},{\"sender\":{\"userId\":5,\"firstName\":\"anisul\",\"lastName\":\"hoque\",\"userEmail\":\"anis@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/0611201773348profile.jpg\"},\"message\":{\"m_id\":\"3\",\"sender\":\"5\",\"receiver\":\"1\",\"message\":\"vvxcvxcvxcvxcv\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-19\",\"time\":\"07:05:02\",\"date_time\":\"2017-10-19 19:05:02\",\"ios_date_time\":\"2017-10-19T19:05:02+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"4\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\",\"type\":\"text\",\"link\":\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.google.com.bd\\/maps\\/place\\/National+Parliament+House\\/@23.756914,90.360714,15z\\/data=!4m5!3m4!1s0x0:0x14e06df6918d8844!8m2!3d23.762301!4d90.3787494?hl=en\\\",\\\"host\\\":\\\"www.google.com.bd\\\",\\\"title\\\":\\\"National Parliament House\\\",\\\"description\\\":\\\"Manik Mia Ave, Dhaka\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/maps.google.com\\/maps\\/api\\/staticmap?center=23.762300984583586%2C90.37656071498157&zoom=16&size=256x256&language=en&markers=23.762300999999997%2C90.37874939999999&sensor=false&client=google-maps-frontend&signature=2wuNbESqzTWJjKvYtMVv9F-4odE\\\",\\\"type\\\":\\\"image\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"08:11:34\",\"date_time\":\"2017-10-20 08:11:34\",\"ios_date_time\":\"2017-10-20T08:11:34+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"6\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\",\"type\":\"text\",\"link\":\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/github.com\\/velocityzen\\/meta-extractor\\\",\\\"host\\\":\\\"github.com\\\",\\\"title\\\":\\\"velocityzen\\/meta-extractor\\\",\\\"description\\\":\\\"meta-extractor - Super simple and fast html page meta data extractor\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":\\\"https:\\/\\/avatars3.githubusercontent.com\\/u\\/451068?s=400&v=4\\\",\\\"type\\\":\\\"image\\\"}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"09:08:25\",\"date_time\":\"2017-10-20 09:08:25\",\"ios_date_time\":\"2017-10-20T09:08:25+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"7\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"https:\\/\\/www.google.com\\/search?rlz=1C1AVFC_enBD767BD767&amp;q=img-responsive&amp;spell=1&amp;sa=X&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&amp;biw=1366&amp;bih=637\",\"type\":\"text\",\"link\":\"https:\\/\\/www.google.com\\/search?amp;bih=637&amp;biw=1366&amp;q=img-responsive&amp;sa=X&amp;spell=1&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&rlz=1C1AVFC_enBD767BD767\",\"linkData\":\"{\\\"mainUrl\\\":\\\"https:\\/\\/www.google.com\\/search?amp;bih=637&amp;biw=1366&amp;q=img-responsive&amp;sa=X&amp;spell=1&amp;ved=0ahUKEwjVityN5v7WAhWLKo8KHZJ5CC8QvwUIJCgA&rlz=1C1AVFC_enBD767BD767\\\",\\\"host\\\":\\\"www.google.com\\\",\\\"title\\\":\\\"Google\\\",\\\"description\\\":\\\"Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.\\\",\\\"playerOrImageUrl\\\":{\\\"url\\\":null,\\\"type\\\":null}}\",\"receiver_type\":\"user\",\"date\":\"2017-10-20\",\"time\":\"09:25:45\",\"date_time\":\"2017-10-20 09:25:45\",\"ios_date_time\":\"2017-10-20T09:25:45+0000\"}},{\"sender\":{\"userId\":10,\"firstName\":\"simon\",\"lastName\":\"hasan\",\"userEmail\":\"simon@gmail.com\",\"userAddress\":null,\"userMobile\":null,\"userStatus\":1,\"userGender\":null,\"profilePictureUrl\":\"http:\\/\\/localhost\\/im-messenger\\/assets\\/userImage\\/1030201775416profile10.jpg\"},\"message\":{\"m_id\":\"8\",\"sender\":\"10\",\"receiver\":\"1\",\"message\":\"\\ud83d\\ude05\\ud83d\\ude1f\",\"type\":\"text\",\"link\":null,\"linkData\":null,\"receiver_type\":\"user\",\"date\":\"2017-10-21\",\"time\":\"04:21:56\",\"date_time\":\"2017-10-21 16:21:56\",\"ios_date_time\":\"2017-10-21T16:21:56+0000\"}}]}"
+				}
+			]
+		}
+	]
+}

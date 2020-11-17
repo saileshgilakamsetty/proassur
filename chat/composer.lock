@@ -1,0 +1,208 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "4d355c047c310068b604a98999e720bc",
+    "content-hash": "5c724132175b18d627ea1571b8dba61b",
+    "packages": [
+        {
+            "name": "emojione/emojione",
+            "version": "3.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/emojione/emojione.git",
+                "reference": "f0d00822b25cef78726289c16e379f64e0ea23b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/emojione/emojione/zipball/f0d00822b25cef78726289c16e379f64e0ea23b6",
+                "reference": "f0d00822b25cef78726289c16e379f64e0ea23b6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.6 || ~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Emojione\\": "lib/php/src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "(CC-BY-4.0 and MIT)"
+            ],
+            "description": "EmojiOne is a complete set of emojis designed for the web. It includes libraries to easily convert unicode characters to shortnames (:smile:) and shortnames to our custom emoji images. PNG format provided for the emoji images.",
+            "homepage": "http://www.emojione.com",
+            "keywords": [
+                "emoji",
+                "emojione",
+                "emojis",
+                "emoticons",
+                "smileys",
+                "smilies",
+                "unicode"
+            ],
+            "time": "2017-08-08 16:33:10"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2016-10-10 12:19:37"
+        },
+        {
+            "name": "wisembly/elephant.io",
+            "version": "v3.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Wisembly/elephant.io.git",
+                "reference": "9d56f409fe231a906af87005f83a135565632d3f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Wisembly/elephant.io/zipball/9d56f409fe231a906af87005f83a135565632d3f",
+                "reference": "9d56f409fe231a906af87005f83a135565632d3f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ElephantIO\\": [
+                        "src/",
+                        "test/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Baptiste Clavié",
+                    "email": "baptiste@wisembly.com",
+                    "homepage": "http://baptiste.xn--clavi-fsa.net/",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Guillaume Potier",
+                    "email": "guillaume@wisembly.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Ludovic Barreca",
+                    "email": "ludogp2@gmail.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Elephant.IO Community",
+                    "role": "Contributors :)"
+                }
+            ],
+            "description": "Send events to a websocket real time engine though PHP",
+            "homepage": "http://elephant.io",
+            "keywords": [
+                "dialog",
+                "nodejs",
+                "real time",
+                "websocket"
+            ],
+            "time": "2017-09-10 20:38:38"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "mikey179/vfsStream",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mikey179/vfsStream.git",
+                "reference": "fc0fe8f4d0b527254a2dc45f0c265567c881d07e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mikey179/vfsStream/zipball/fc0fe8f4d0b527254a2dc45f0c265567c881d07e",
+                "reference": "fc0fe8f4d0b527254a2dc45f0c265567c881d07e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "org\\bovigo\\vfs": "src/main/php"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "homepage": "http://vfs.bovigo.org/",
+            "time": "2012-08-25 12:49:29"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.2.4"
+    },
+    "platform-dev": []
+}

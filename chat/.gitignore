@@ -1,0 +1,8 @@
+*.zip
+*.pdf
+
+/.idea
+assets/userimage/*
+assets/im/*
+ffmpeg.exe
+application/logs/*

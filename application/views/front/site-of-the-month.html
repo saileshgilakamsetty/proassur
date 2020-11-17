@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" />
+<link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>Ugliest</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/fonts.css" rel="stylesheet">
+<link href="css/flexslider.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/pushy.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<!-- Pushy Menu -->
+<nav class="pushy pushy-left" data-focus="#first-link">
+  <div class="pushy-content">
+    <ul>
+      <li class="pushy-submenu">
+        <button id="first-link">Submenu 1</button>
+        <ul>
+          <li class="pushy-link"><a href="#">Item 1</a></li>
+          <li class="pushy-link"><a href="#">Item 2</a></li>
+          <li class="pushy-link"><a href="#">Item 3</a></li>
+        </ul>
+      </li>
+      <li class="pushy-submenu">
+        <button>Submenu 2</button>
+        <ul>
+          <li class="pushy-link"><a href="#">Item 1</a></li>
+          <li class="pushy-link"><a href="#">Item 2</a></li>
+          <li class="pushy-link"><a href="#">Item 3</a></li>
+        </ul>
+      </li>
+      <li class="pushy-submenu">
+        <button>Submenu 3</button>
+        <ul>
+          <li class="pushy-link"><a href="#">Item 1</a></li>
+          <li class="pushy-link"><a href="#">Item 2</a></li>
+          <li class="pushy-link"><a href="#">Item 3</a></li>
+        </ul>
+      </li>
+      <li class="pushy-submenu">
+        <button>Submenu 4</button>
+        <ul>
+          <li class="pushy-link"><a href="#">Item 1</a></li>
+          <li class="pushy-link"><a href="#">Item 2</a></li>
+          <li class="pushy-link"><a href="#">Item 3</a></li>
+        </ul>
+      </li>
+      <li class="pushy-link"><a href="#">Item 1</a></li>
+      <li class="pushy-link"><a href="#">Item 2</a></li>
+      <li class="pushy-link"><a href="#">Item 3</a></li>
+      <li class="pushy-link"><a href="#">Item 4</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Site Overlay -->
+<div class="site-overlay"></div>
+
+<!-- header -->
+<header>
+  <div class="headTop">
+    <div class="col-xs-12 col-sm-6">
+      <div class="topContact">
+        <ul>
+          <li><a href="#"><i class="fas fa-envelope"></i>info@ugliest.com</a></li>
+          <li><i class="fas fa-rotate-90 fa-phone"></i>(+1)369-258-147</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <div class="topSocal">
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="headMenu">
+    <div class="col-xs-12 col-sm-4">
+      <div class="sideMenu">
+        <button class="menu-btn"><span>&#9776;</span> Menu</button>
+        <a href="javascript:void(0)" id="addClass" class="serchBtn"></a> </div>
+    </div>
+    <div class="col-xs-12 col-sm-4"> <a class="topLogo" href="#"><img src="images/logo.png" class="img-responsive"></a> </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="loginList">
+        <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Sign up</a></li>
+          <li><a href="#">Wishlist</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- header --> 
+
+<!-- BREADCRUMB-->
+<div class="main_bmenu">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li class="active">Site of the Month</li>
+    </ol>
+  </div>
+</div>
+
+<!-- BREADCRUMB --> 
+
+<!-- listing -->
+<div class="mainFilter">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-md-3">
+       <input type="button" id="catBtn" value="Filters" class="hidden-sm hidden-md hidden-lg"/>
+        <div id="categoRies">
+        <div class="categories">
+          <h2>Categories</h2>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" name="option[]" value="" checked >
+                Ecommerce</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="option[]" value="" >
+                Gaming</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="option[]" value="" >
+                Informational</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="option[]" value="" >
+                Government</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="option[]" value="" >
+                Kids</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="option[]" value="" >
+                Electronics</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="option[]" value="" >
+                Fashion</label>
+            </li>
+          </ul>
+        </div>
+        <div class="categories">
+          <h2>Colors</h2>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" name="color[]" value="" checked >
+                Black</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="color[]" value="" >
+                Green</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="color[]" value="" >
+                Purple</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="color[]" value="" >
+                Red</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="color[]" value="" >
+                Blue</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="color[]" value="" >
+                Yellow</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="color[]" value="" >
+                Pink</label>
+            </li>
+          </ul>
+        </div>
+        <div class="categories">
+          <h2>Country</h2>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" name="country[]" value="" checked >
+                Ecommerce</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="country[]" value="" >
+                Gaming</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="country[]" value="" >
+                Informational</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="country[]" value="" >
+                Government</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="country[]" value="" >
+                Kids</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="country[]" value="" >
+                Electronics</label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="country[]" value="" >
+                Fashion</label>
+            </li>
+          </ul>
+        </div>
+        <div class="latestAdd">
+          <h2>Latest Added</h2>
+          <ul>
+            <li> <a href="#">
+              <figure><img src="images/add-thumb.jpg"></figure>
+              Website Name <br>
+              From James </a> </li>
+            <li> <a href="#">
+              <figure><img src="images/add-thumb2.jpg"></figure>
+              Website Name <br>
+              From James </a> </li>
+            <li> <a href="#">
+              <figure><img src="images/add-thumb3.jpg"></figure>
+              Website Name <br>
+              From James </a> </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      <div class="col-sm-8 col-md-9 paddLess">
+        <div class="rank_Top"> <img src="images/inner_banner.jpg"/ class="img-responsive">
+          <div class="inner_sliderOverCont">
+            <div class="row">
+              <div class="col-xs-9"> <a href="#"><strong>Rank #1</strong></a> </div>
+              <div class="col-xs-3"> <a class="slidHeart" href="#"><i class="fas fa-heart"></i></a> </div>
+              <div class="col-xs-12">
+                <div class="slidText_inner">
+                  <h2>Lorem Ipsum is simply dummy</h2>
+                  <p>by <span>Point Blank</span> from Greece with 7.27</p>
+                </div>
+              </div>
+              <div class="col-xs-12">
+                <div class="slidrBtns_inner"> <a href="#">Visit Site</a> <a href="#">vote now</a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sortBy">
+          <label>Sort By</label>
+          <select name="">
+            <option>Date</option>
+            <option>Month</option>
+            <option>Year</option>
+          </select>
+          <span>Showing 1–16 of 56 results</span> <a href="#">Post Website</a> </div>
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="webBox_2">
+              <figure>
+                <div class="overLayer"> <a class="wishList" href="#"><i class="fas fa-heart"></i></a> <a class="votNow" href="#">VOTE NOW</a> </div>
+                <img src="images/web1.png" class="img-responsive"> </figure>
+              <div class="boxCont_2">
+                <div class="col-6">
+                  <h3><a href="#">Nike Reactor</a></h3>
+                  <p class="subTtl">From Netherlands</p>
+                </div>
+                <div class="col-6">
+                  <ul class="postTimer">
+                    <li> <span>07</span>
+                      <p>HOURS</p>
+                    </li>
+                    <li> <span>53</span>
+                      <p>MIN</p>
+                    </li>
+                    <li> <span>36</span>
+                      <p>SEC</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="webRank"><a href="#">Total Vote : 150</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="webBox_2">
+              <figure>
+                <div class="overLayer"> <a class="wishList" href="#"><i class="fas fa-heart"></i></a> <a class="votNow" href="#">VOTE NOW</a> </div>
+                <img src="images/web2.png" class="img-responsive"> </figure>
+              <div class="boxCont_2">
+                <div class="col-6">
+                  <h3><a href="#">Nike Reactor</a></h3>
+                  <p class="subTtl">From Netherlands</p>
+                </div>
+                <div class="col-6">
+                  <ul class="postTimer">
+                    <li> <span>07</span>
+                      <p>HOURS</p>
+                    </li>
+                    <li> <span>53</span>
+                      <p>MIN</p>
+                    </li>
+                    <li> <span>36</span>
+                      <p>SEC</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="webRank"><a href="#">Total Vote : 150</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="webBox_2">
+              <figure>
+                <div class="overLayer"> <a class="wishList" href="#"><i class="fas fa-heart"></i></a> <a class="votNow" href="#">VOTE NOW</a> </div>
+                <img src="images/web3.png" class="img-responsive"> </figure>
+              <div class="boxCont_2">
+                <div class="col-6">
+                  <h3><a href="#">Nike Reactor</a></h3>
+                  <p class="subTtl">From Netherlands</p>
+                </div>
+                <div class="col-6">
+                  <ul class="postTimer">
+                    <li> <span>07</span>
+                      <p>HOURS</p>
+                    </li>
+                    <li> <span>53</span>
+                      <p>MIN</p>
+                    </li>
+                    <li> <span>36</span>
+                      <p>SEC</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="webRank"><a href="#">Total Vote : 150</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="webBox_2">
+              <figure>
+                <div class="overLayer"> <a class="wishList" href="#"><i class="fas fa-heart"></i></a> <a class="votNow" href="#">VOTE NOW</a> </div>
+                <img src="images/web4.png" class="img-responsive"> </figure>
+              <div class="boxCont_2">
+                <div class="col-6">
+                  <h3><a href="#">Nike Reactor</a></h3>
+                  <p class="subTtl">From Netherlands</p>
+                </div>
+                <div class="col-6">
+                  <ul class="postTimer">
+                    <li> <span>07</span>
+                      <p>HOURS</p>
+                    </li>
+                    <li> <span>53</span>
+                      <p>MIN</p>
+                    </li>
+                    <li> <span>36</span>
+                      <p>SEC</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="webRank"><a href="#">Total Vote : 150</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="webBox_2">
+              <figure>
+                <div class="overLayer"> <a class="wishList" href="#"><i class="fas fa-heart"></i></a> <a class="votNow" href="#">VOTE NOW</a> </div>
+                <img src="images/web5.png" class="img-responsive"> </figure>
+              <div class="boxCont_2">
+                <div class="col-6">
+                  <h3><a href="#">Nike Reactor</a></h3>
+                  <p class="subTtl">From Netherlands</p>
+                </div>
+                <div class="col-6">
+                  <ul class="postTimer">
+                    <li> <span>07</span>
+                      <p>HOURS</p>
+                    </li>
+                    <li> <span>53</span>
+                      <p>MIN</p>
+                    </li>
+                    <li> <span>36</span>
+                      <p>SEC</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="webRank"><a href="#">Total Vote : 150</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="webBox_2">
+              <figure>
+                <div class="overLayer"> <a class="wishList" href="#"><i class="fas fa-heart"></i></a> <a class="votNow" href="#">VOTE NOW</a> </div>
+                <img src="images/web6.png" class="img-responsive"> </figure>
+              <div class="boxCont_2">
+                <div class="col-6">
+                  <h3><a href="#">Nike Reactor</a></h3>
+                  <p class="subTtl">From Netherlands</p>
+                </div>
+                <div class="col-6">
+                  <ul class="postTimer">
+                    <li> <span>07</span>
+                      <p>HOURS</p>
+                    </li>
+                    <li> <span>53</span>
+                      <p>MIN</p>
+                    </li>
+                    <li> <span>36</span>
+                      <p>SEC</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="webRank"><a href="#">Total Vote : 150</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="webBox_2">
+              <figure>
+                <div class="overLayer"> <a class="wishList" href="#"><i class="fas fa-heart"></i></a> <a class="votNow" href="#">VOTE NOW</a> </div>
+                <img src="images/web7.png" class="img-responsive"> </figure>
+              <div class="boxCont_2">
+                <div class="col-6">
+                  <h3><a href="#">Nike Reactor</a></h3>
+                  <p class="subTtl">From Netherlands</p>
+                </div>
+                <div class="col-6">
+                  <ul class="postTimer">
+                    <li> <span>07</span>
+                      <p>HOURS</p>
+                    </li>
+                    <li> <span>53</span>
+                      <p>MIN</p>
+                    </li>
+                    <li> <span>36</span>
+                      <p>SEC</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="webRank"><a href="#">Total Vote : 150</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="webBox_2">
+              <figure>
+                <div class="overLayer"> <a class="wishList" href="#"><i class="fas fa-heart"></i></a> <a class="votNow" href="#">VOTE NOW</a> </div>
+                <img src="images/web8.png" class="img-responsive"> </figure>
+              <div class="boxCont_2">
+                <div class="col-6">
+                  <h3><a href="#">Nike Reactor</a></h3>
+                  <p class="subTtl">From Netherlands</p>
+                </div>
+                <div class="col-6">
+                  <ul class="postTimer">
+                    <li> <span>07</span>
+                      <p>HOURS</p>
+                    </li>
+                    <li> <span>53</span>
+                      <p>MIN</p>
+                    </li>
+                    <li> <span>36</span>
+                      <p>SEC</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="webRank"><a href="#">Total Vote : 150</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="webBox_2">
+              <figure>
+                <div class="overLayer"> <a class="wishList" href="#"><i class="fas fa-heart"></i></a> <a class="votNow" href="#">VOTE NOW</a> </div>
+                <img src="images/web9.png" class="img-responsive"> </figure>
+              <div class="boxCont_2">
+                <div class="col-6">
+                  <h3><a href="#">Nike Reactor</a></h3>
+                  <p class="subTtl">From Netherlands</p>
+                </div>
+                <div class="col-6">
+                  <ul class="postTimer">
+                    <li> <span>07</span>
+                      <p>HOURS</p>
+                    </li>
+                    <li> <span>53</span>
+                      <p>MIN</p>
+                    </li>
+                    <li> <span>36</span>
+                      <p>SEC</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="webRank"><a href="#">Total Vote : 150</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="webBox_2">
+              <figure>
+                <div class="overLayer"> <a class="wishList" href="#"><i class="fas fa-heart"></i></a> <a class="votNow" href="#">VOTE NOW</a> </div>
+                <img src="images/web10.jpg" class="img-responsive"> </figure>
+              <div class="boxCont_2">
+                <div class="col-6">
+                  <h3><a href="#">Nike Reactor</a></h3>
+                  <p class="subTtl">From Netherlands</p>
+                </div>
+                <div class="col-6">
+                  <ul class="postTimer">
+                    <li> <span>07</span>
+                      <p>HOURS</p>
+                    </li>
+                    <li> <span>53</span>
+                      <p>MIN</p>
+                    </li>
+                    <li> <span>36</span>
+                      <p>SEC</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="webRank"><a href="#">Total Vote : 150</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="webBox_2">
+              <figure>
+                <div class="overLayer"> <a class="wishList" href="#"><i class="fas fa-heart"></i></a> <a class="votNow" href="#">VOTE NOW</a> </div>
+                <img src="images/web11.jpg" class="img-responsive"> </figure>
+              <div class="boxCont_2">
+                <div class="col-6">
+                  <h3><a href="#">Nike Reactor</a></h3>
+                  <p class="subTtl">From Netherlands</p>
+                </div>
+                <div class="col-6">
+                  <ul class="postTimer">
+                    <li> <span>07</span>
+                      <p>HOURS</p>
+                    </li>
+                    <li> <span>53</span>
+                      <p>MIN</p>
+                    </li>
+                    <li> <span>36</span>
+                      <p>SEC</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="webRank"><a href="#">Total Vote : 150</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="webBox_2">
+              <figure>
+                <div class="overLayer"> <a class="wishList" href="#"><i class="fas fa-heart"></i></a> <a class="votNow" href="#">VOTE NOW</a> </div>
+                <img src="images/web12.jpg" class="img-responsive"> </figure>
+              <div class="boxCont_2">
+                <div class="col-6">
+                  <h3><a href="#">Nike Reactor</a></h3>
+                  <p class="subTtl">From Netherlands</p>
+                </div>
+                <div class="col-6">
+                  <ul class="postTimer">
+                    <li> <span>07</span>
+                      <p>HOURS</p>
+                    </li>
+                    <li> <span>53</span>
+                      <p>MIN</p>
+                    </li>
+                    <li> <span>36</span>
+                      <p>SEC</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="webRank"><a href="#">Total Vote : 150</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="paginate">
+          <ul class="pagination">
+            <li class="active "><span>1</span></li>
+            <li><a href="#" class=" ">2</a></li>
+            <li><a href="#" class=" ">3</a></li>
+            <li><a href="#" class=" ">Next</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- listing -->
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="futSocal">
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-google"></i></a></li>
+        </ul>
+        <p class="copyRight">© 2018 <span>Ugliest</span> All rights reserved</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<div id="qnimate" class="off">
+  <div id="search" class="open">
+    <button data-widget="remove" id="removeClass" class="close" type="button">×</button>
+    <form role="search" method="get" id="searchform" action="#" autocomplete="off">
+      <input type="text" name="s" id="s"  placeholder="Type search keywords here" />
+      <button class="btn btn-lg btn-site" type="submit"><span class="glyphicon glyphicon-search"></span> Search</button>
+    </form>
+  </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/pushy.min.js"></script> 
+
+<!-- FlexSlider --> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+<script defer src="js/jquery.flexslider.js"></script> 
+<script type="text/javascript">
+	$(window).load(function(){
+	  $('.flexslider').flexslider({
+		animation: "fade",
+	  });
+	  $('#testimonial').flexslider({
+		animation: "slide",
+	  });
+	});
+</script> 
+<script>
+  $(function(){
+	$("#addClass").click(function () {
+	  $('#qnimate').addClass('popup-box-on');
+		});
+	  
+		$("#removeClass").click(function () {
+	  $('#qnimate').removeClass('popup-box-on');
+		});
+  })
+</script> 
+<!-- custom check box --> 
+<script type="text/javascript">
+    function customCheckbox(checkboxName){
+        var checkBox = $('input[name="'+ checkboxName +'"]');
+        $(checkBox).each(function(){
+            $(this).wrap( "<span class='custom-checkbox'></span>" );
+            if($(this).is(':checked')){
+                $(this).parent().addClass("selected");
+            }
+        });
+        $(checkBox).click(function(){
+            $(this).parent().toggleClass("selected");
+        });
+    }
+    $(document).ready(function (){
+        customCheckbox("option[]");
+		customCheckbox("color[]");
+		customCheckbox("country[]");
+    })
+</script>
+<!-- toggle --> 
+<script>
+$('#catBtn').click(function(){
+   $('#categoRies').slideToggle(1000) 
+});
+</script> 
+</body>
+</html>

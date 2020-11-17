@@ -1,0 +1,622 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+body,html,p{margin:0px; padding:0px; font-family: 'Montserrat', sans-serif;}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+aside, details, figcaption, figure, ins, summary, small, mark, title, video, footer, header, hgroup, nav, section, article {display:block;}
+.clear{padding:0; margin:0; line-height:0; height:0; font-size:0; clear:both; width:100%; display:block;}
+h1, h2, h3, h4, h5, h6 {padding:0; margin:0; font-weight:normal; font-family: 'Montserrat', sans-serif;}
+html, body {height:100%; width:100%; padding:0; margin:0;}
+body *{box-sizing:border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
+ul li{list-style:none;}
+input,button{outline:none; border:none;}
+a, a:hover, a:focus{text-decoration:none; outline:none; transition:all .5s; -webkit-transition:all .5s; -moz-transition:all .5s;}
+a, a:active, a:hover {outline: 0; transition:all .5s; -webkit-transition:all .5s; -moz-transition:all .5s;}
+button{transition:all .5s;}
+:focus{outline:none;}
+img{border:none;}
+
+/********Main Css********/
+
+
+header{position:absolute; top:0px; width:100%; z-index:3; border-bottom:1px solid rgba(255,255,255,0.3);}
+header .topLogo{margin:5px 0;}
+
+.headTop{text-align:right; position:relative; padding:7px 0;}
+.headTop:before{content:""; position:absolute; height:100%; width:54%; top:0px; right:0px; background:#007abe;}
+.headTop:after{content:""; position:absolute; top:0px; right:54%; margin-right:-93px;
+    width: 0;
+    height: 0;
+    border-style:solid;
+    border-width:0 93px 40px 117px;
+    border-color:transparent transparent #007abe transparent;
+}
+.headTop .topContact{margin:0px; padding:0px; display:inline-block;}
+.headTop .topContact li{display:inline-block; padding-left:25px; position:relative; margin-left:15px;}
+.headTop .topContact li i{position:absolute; left:0px; top:3px;}
+.headTop .topContact li i.fa-phone{transform:rotate(90deg);}
+.headTop .topContact li a{display:block; color:#e3e3e3; font-size:12px; font-weight:500;}
+.headTop .language{display:inline-block; position:relative; margin-left:20px; vertical-align:middle;}
+.headTop .language ul{margin:0px; padding:0px; display:flex;}
+.headTop .language ul li{display:inline-block; width:25px; margin-left:10px;}
+.headTop .language ul li a{display:block; opacity:.3;}
+.headTop .language ul li .active,
+.headTop .language ul li a:hover{opacity:1;}
+
+
+
+.inrHeader .regLogin{font-weight:600;}
+.inrHeader .regLogin img{height:35px; width:35px; object-fit:cover; border-radius:100%; vertical-align:middle; margin-right:10px;}
+.inrHeader #cssmenu .regLogin .dropdown-menu > a{padding:10px;}
+.inrHeader #cssmenu .regLogin > .dropdown-menu > a + a{border-top:1px solid #CCC;}
+
+
+#cssmenu ul li.signBtn a{border:1px solid #FFF; border-radius:30px; transition:all .5s; -webkit-transition:all .5s; -moz-transition:all .5s;}
+#cssmenu ul li.signBtn a:hover{background:#007abe; border-color:#007abe;}
+
+.inrHeader #cssmenu ul li.signBtn a{border-color:#007abe; color:#007abe;}
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {margin:0; padding:0; border:0; list-style:none; line-height:1; display:block; position:relative; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+#cssmenu:after,
+#cssmenu > ul:after{content:"."; display:block; clear:both; visibility:hidden; line-height:0; height:0;}
+#cssmenu #menu-button{display:none;}
+#cssmenu{width:auto; font-family: 'Montserrat', sans-serif; line-height:1; text-align:right; margin-top:14px;}
+#menu-line{display:none; position:absolute; top:0; left:0; height:3px; background:#009ae1; -webkit-transition:all 0.25s ease-out; -moz-transition:all 0.25s ease-out; -ms-transition:all 0.25s ease-out; -o-transition:all 0.25s ease-out; transition:all 0.25s ease-out;}
+#cssmenu > ul > li{display:inline-block;}
+#cssmenu.align-center > ul {font-size:0; text-align:center;}
+#cssmenu.align-center > ul > li {display:inline-block; float:none;}
+#cssmenu.align-center ul ul {text-align:left;}
+#cssmenu.align-right > ul > li {float:right;}
+#cssmenu.align-right ul ul {text-align:right;}
+#cssmenu > ul > li > a{padding:10px 20px; font-size:14px; text-decoration:none; color:#e9e9e9; transition:all .5s; -webkit-transition:all .5s; -moz-transition:all .5s;}
+.inrHeader #cssmenu > ul > li > a{color:#505050;}
+#cssmenu > ul > li > a > strong{font-weight:600;}
+#cssmenu > ul > li:hover > a,
+#cssmenu > ul > li.active > a{background:#007abe; color:#FFF;}
+#cssmenu > ul > li.has-sub > a {padding-right:25px;}
+#cssmenu > ul > li.has-sub > a::after {position:absolute; top:21px; right:10px; width:4px; height:4px; border-bottom:1px solid #000; border-right:1px solid #000; content:""; -webkit-transform:rotate(45deg); -moz-transform:rotate(45deg); -ms-transform:rotate(45deg); -o-transform:rotate(45deg); transform:rotate(45deg); -webkit-transition:border-color 0.2s ease; -moz-transition:border-color 0.2s ease; -ms-transition:border-color 0.2s ease; -o-transition:border-color 0.2s ease; transition:border-color 0.2s ease;}
+#cssmenu > ul > li.has-sub:hover > a::after {border-color:#009ae1;}
+#cssmenu ul ul {position:absolute; left:-9999px;}
+#cssmenu li:hover > ul {left:auto;}
+#cssmenu.align-right li:hover > ul {right:0;}
+#cssmenu ul ul ul {margin-left:100%; top:0;}
+#cssmenu.align-right ul ul ul {margin-left:0; margin-right:100%;}
+#cssmenu ul ul li {height:0; -webkit-transition:height .2s ease; -moz-transition:height .2s ease; -ms-transition:height .2s ease; -o-transition:height .2s ease; transition:height .2s ease;}
+#cssmenu ul li:hover > ul > li {height:32px;}
+#cssmenu ul ul li a {padding:10px 20px; width:160px; font-size:12px; background:#333; text-decoration:none; color:#ddd; -webkit-transition:color .2s ease; -moz-transition:color .2s ease; -ms-transition:color .2s ease; -o-transition:color .2s ease; transition:color .2s ease;}
+#cssmenu ul ul li:hover > a,
+#cssmenu ul ul li a:hover {color:#fff;}
+#cssmenu ul ul li.has-sub > a::after {position:absolute; top:13px; right:10px; width:4px; height:4px; border-bottom:1px solid #ddd; border-right:1px solid #ddd; content:""; -webkit-transform:rotate(-45deg); -moz-transform:rotate(-45deg); -ms-transform:rotate(-45deg); -o-transform:rotate(-45deg); transform:rotate(-45deg); -webkit-transition:border-color 0.2s ease; -moz-transition:border-color 0.2s ease; -ms-transition:border-color 0.2s ease; -o-transition:border-color 0.2s ease; transition:border-color 0.2s ease;}
+#cssmenu.align-right ul ul li.has-sub > a::after{right:auto; left:10px; border-bottom:0; border-right:0; border-top:1px solid #ddd; border-left:1px solid #ddd;}
+#cssmenu ul ul li.has-sub:hover > a::after {border-color:#fff;}
+
+
+.topSlider{position:relative;}
+.topSlider:before{content:""; position:absolute; height:100%; width:100%; background:url(../images/slider-cover.png) no-repeat left top; background-size:100% 100%; z-index:2;}
+
+.topSlider img{width:100%; max-height:900px; object-fit:cover; opacity:0.3;}
+.topSlider #slider{background:#0074bc;}
+.topSlider .owl-theme .owl-controls{display:none!important;}
+.topSlider .slidText{position:absolute; bottom:35%; width:100%; color:#FFF; z-index:2;}
+.topSlider .slidText h2{font-size:30px; font-weight:500;}
+.topSlider .slidText h2 > span{display:block; font-size:88px; text-transform:uppercase; font-weight:600;}
+.topSlider .slidText p{font-size:17px;}
+.topSlider .slidText a{background:#6cc7ce; display:inline-block; padding:10px 35px; border-radius:20px; color:#FFF; text-transform:uppercase; margin-top:15px;}
+.topSlider .slidText a:hover{background:#007abe;}
+
+.topSlider .slidText h2,
+.topSlider .slidText p{padding-left:60px;}
+.topSlider .slidText a{margin-left:60px;}
+
+
+.ourServis{text-align:center; padding:0 0 50px; clear:both;}
+.ourServis h3{font-size:26px; text-transform:uppercase; font-weight:600;}
+.ourServis .servicsCat{margin:0; padding:0px;}
+.ourServis .servicsCat li{display:inline-block; width:24.5%; margin:40px 0 0;}
+.ourServis .servicsCat li a{display:block;}
+.ourServis .servicsCat li a:hover{transform:scale(1.1,1.1);}
+.ourServis .servicsCat li a:hover figure{box-shadow:0 0 10px #ababab; border-radius:100%;}
+.ourServis .servicsCat li figure{display:inline-block; margin-bottom:15px; transition:all .5s; -webkit-transition:all .5s; -moz-transition:all .5s;}
+.ourServis .servicsCat li p{color:#383838; font-size:15px; font-weight:500;}
+
+.title{color:#383838; font-size:28px; font-weight:700; text-transform:uppercase;}
+.subTitle{color:#8b8b8b; font-size:15px; font-weight:500; margin-top:20px; padding:0 200px;}
+
+.aboutSet{padding:50px 0; clear:both;}
+.aboutSet .title{margin:10px 0 30px;}
+.aboutSet p{font-size:14px; color:#8b8b8b; font-weight:500; line-height:24px; margin-bottom:15px;}
+.aboutSet a.watVid{display:inline-block; color:#a0a0a0; line-height:38px; font-weight:500; margin-top:15px;}
+.aboutSet a.watVid img{margin-right:15px; margin-top:-2px;}
+.aboutSet a.watVid:hover{color:#007abe;}
+
+
+.clientSay{text-align:center; padding:50px 0; clear:both; background:#EEE;}
+.clntSayBox{text-align:left; padding:40px 0 10px;}
+.clntSayBox .sayBox{background:#FFF; padding:30px; border-radius:5px; position:relative; margin-bottom:60px;}
+.clntSayBox .sayBox:after{content:""; position:absolute; top:100%; width:0; height:0;
+border-style:solid;
+border-width:45px 60px 0 0;
+border-color:#FFF transparent transparent transparent;
+}
+.clntSayBox .sayBox h3{font-size:20px; color:#383838; font-weight:500; margin-bottom:5px;}
+.clntSayBox .sayBox p.clntName{font-size:12px; color:#8b8b8b; margin:0px;}
+.clntSayBox .sayBox p{font-size:14px; color:#8b8b8b; margin:15px 0 0; line-height:22px;}
+.clntSayBox figure{display:inline-block;}
+.clntSayBox figure img{height:60px; width:60px; object-fit:cover; border-radius:100%; border:8px solid #FFF; box-shadow:3px 3px 4px #b7b7b7;}
+
+
+.clientSay .owl-pagination,
+.ourPartner .owl-pagination{display:none;}
+.clientSay .owl-buttons,
+.ourPartner .owl-buttons{position:absolute; width:100%; top:-60px;}
+.clientSay .owl-theme .owl-controls .owl-buttons .owl-prev,
+.clientSay .owl-theme .owl-controls .owl-buttons .owl-next,
+.ourPartner .owl-theme .owl-controls .owl-buttons .owl-prev,
+.ourPartner .owl-theme .owl-controls .owl-buttons .owl-next{opacity:1; height:40px; width:40px; box-shadow:2px 2px 8px #999;}
+.clientSay .owl-theme .owl-controls .owl-buttons .owl-prev,
+.ourPartner .owl-theme .owl-controls .owl-buttons .owl-prev{float:left; background:url(../images/arrow-left.png) no-repeat center center #FFF;}
+.clientSay .owl-theme .owl-controls .owl-buttons .owl-next,
+.ourPartner .owl-theme .owl-controls .owl-buttons .owl-next{float:right; background:url(../images/arrow-right.png) no-repeat center center #FFF;}
+
+
+.ourPartner{text-align:center; padding:50px 0; clear:both;}
+.ourPartner #partner figure{line-height:150px; padding:50px 10px 0;}
+.ourPartner #partner figure img{display:inline-block;}
+
+
+
+.newsLetter{text-align:center; padding:50px 0; clear:both; background:#EEE;}
+.newsLetter .title{margin-bottom:40px;}
+.newsLetter .subScrib input{height:50px; display:inline-block; padding:0 15px; border-radius:6px; font-size:16px; vertical-align:middle;}
+.newsLetter .subScrib .inputFild{width:60%; margin-right:1%;}
+.newsLetter .subScrib .submitBtn{width:30%; background:#007abe; text-align:center; color:#FFF; font-weight:700; letter-spacing:1px; transition:all .5s; -webkit-transition:all .5s; -moz-transition:all .5s;}
+.newsLetter .subScrib .submitBtn:hover{background:#005382;}
+
+
+footer .footer{font-size:12px; color:#8b8b8b; padding:50px 0; line-height:22px;}
+footer .footer h3{font-size:16px; color:#383838; font-weight:600; letter-spacing:0.5px; margin:25px 0;}
+footer .footer address{margin:0px; padding:0px;}
+footer .footer address p{position:relative; padding-left:30px; margin-bottom:14px;}
+footer .footer address p i{position:absolute; left:0px; top:2px; font-size:13px;}
+footer .footer address .fa-phone{transform:rotate(90deg);}
+footer .footer address p > span,
+footer .footer address p a{color:#8b8b8b; display:block; margin-bottom:5px;}
+footer .footer ul{margin:0px; padding:0px;}
+footer .footer ul li{display:block;}
+footer .footer a{display:block; color:#8b8b8b;}
+footer .footer a:hover{color:#007abe;}
+footer .futAbout figure{margin-bottom:20px;}
+footer .futAbout p{padding-right:50px;}
+
+footer .copyRight{background:#003b5a; color:#dddcdc; font-size:12px; font-weight:500; padding:10px 0;}
+footer .copyRight p{padding-top:12px;}
+footer .copyRight .futSocal{text-align:right; margin:0px; padding:0px;}
+footer .copyRight .futSocal li{display:inline-block; margin-left:15px;}
+footer .copyRight .futSocal li a{display:block; font-size:24px; color:#dddcdc; transition:all .5s; -webkit-transition:all .5s; -moz-transition:all .5s;}
+footer .copyRight .futSocal li a:hover{color:#0179bd;}
+
+
+
+button.close{position:absolute; top:-20px; right:-20px; opacity:1; color:#000; width:40px; height:40px; border-radius:100%; background:#fff; text-shadow:none; z-index:1;}
+button.close:hover{background:#007abe; opacity:1; color:#FFF;}
+
+
+/*----------- Login Form ------------------------*/ 
+.loginBg{background:url(../images/loging-bg.jpg) no-repeat fixed; background-size:cover; clear:both; padding:0}
+.loginForm{width:400px; margin:auto; background:#fff; padding:50px 30px 15px; box-shadow:0px 7px 13px #134a6c; border-radius:5px; height:500px;left: 0;top: 0;bottom: 0;right: 0;position:fixed;}
+.loginForm figure{text-align:center; padding-bottom:20px;}
+.loginForm input{border-style:solid; font-weight:500; border-width:0 0 1px; border-color:transparent transparent #ccc; border-radius:0px; padding:0px; font-size:16px; color:#b0b0b0; padding:0 0 0 35px; height:50px; box-shadow:none;}
+.loginForm input[type="checkbox"]{height:auto;}
+.loginForm input:focus{box-shadow:none;}
+.loginForm input::placeholder{color:#b0b0b0;}
+.loginForm button{width:100%; border-radius:25px; color:#fff; margin:15px 0; background:#007abe; border:none; text-transform:uppercase; font-size:14px; font-weight:500; padding:13px 0;}
+.loginForm button:hover{background:#008a89;}
+.emailicon{position:relative;}
+.emailicon span{ position:absolute; left:0; top:12px;}
+.loginForm .form-group{margin-bottom: 1.6rem;}
+.forgot{text-align:right; margin-top:-14px;}
+.forgot a{display:inline-block; color:#007abe; font-weight:500; font-size:14px;}
+.forgot a:hover{text-decoration:underline; color:#008a89;}
+.signUp{text-align:center;}
+.signUp p{font-size:16px; color:#b0b0b0; font-weight:500;}
+.signUp a{ font-size:18px; color:#007abe; display:inline-block; padding:4px 15px; text-transform:uppercase; font-weight:600;}
+.signUp a:hover{text-decoration:underline; color:#008a89;}
+.sBtn{text-align:right;}
+
+.loginForm .backHome{font-size:14px; font-weight:600; text-align:center; display:block; text-transform:uppercase;}
+.loginForm .backHome a{border-bottom:1px solid #007abe;}
+
+/*-------------------- Sign Up Form ------------------------*/ 
+.signUpForm{width:750px;}
+.signUpForm p{display:inline-block;}
+.signUpForm .signUp{text-align:left; line-height:39px;}
+.signUpForm button{width:200px; margin:0px;}
+.signUpForm .forgot{text-align:left; margin:0px;}
+.signUpForm .custom-control-label::before{width: 1.3rem;height: 1.3rem;}
+.signUpForm .custom-control-label::after{top: .15rem;left: -1.6rem;display: block;width: 1.5rem;height: 1.5rem;}
+.signUpForm .custom-control-input:focus ~ .custom-control-label::before{box-shadow:none;}
+.signUpForm .custom-control-label{position:relative;margin-bottom: 0;padding-left: 9px;padding-top: 2px;color: #545454; font-size:14px;font-weight: 500;}
+.signUpForm .custom-control{margin-top:20px;}
+.signUpForm .inputCheck{padding-top:10px;}
+.signUpForm .inputCheck label{font-weight:600; color:#666;}
+
+
+/** =============== CHECKBOX btn ================ **/
+.custom-radio{width:20px; height:20px; display:inline-block; position:relative; z-index:0; top:4px; margin-right:16px; background:url(../images/uncheckRadio.png) no-repeat;}
+.custom-radio.selected{background: url(../images/checkRadio.png) no-repeat;margin-right:16px;}
+.custom-radio input[type=radio]{width:20px; height:20px; margin: 0;position: absolute;z-index: 2;cursor: pointer;outline: none;opacity: 0;_noFocusLine: expression(this.hideFocus=true); 
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0);-khtml-opacity: 0;-moz-opacity: 0;}
+
+/** =============== CHECKBOX btn ================ **/
+.custom-checkbox{width:20px;height:20px;display:inline-block;position:relative;z-index:1;top:1px;background:url(../images/checkbox1.png) no-repeat;margin:0 10px 0 0;float:left;}
+.custom-checkbox.selected{background:url(../images/checkbox2.png) no-repeat;}
+.custom-checkbox input[type=checkbox]{height:20px; width:20px; margin:0;position:absolute;z-index:2;cursor:pointer;outline:none;opacity:0;_noFocusLine:expression(this.hideFocus=true);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0);-khtml-opacity:0;-moz-opacity:0;}
+
+
+
+header.inrHeader{position:relative; border-bottom:1px solid #e1e1e1;}
+header.inrHeader .headTop{background:#007abe;}
+.inrHeader .headTop:before,
+.inrHeader .headTop:after{display:none;}
+
+
+
+.motorInsur{padding:50px 0; clear:both; position:relative;}
+.motorInsur .motorImg{position:absolute; left:0; bottom:0px; max-width:100%;}
+.motorInsur .title{font-size:38px; font-weight:500; text-transform:capitalize; color:#000; margin:30px 0;}
+.quckDetail{background:#ececec; padding:40px 25px;}
+.quckDetail label{display:block; font-size:14px; color:#313131; font-weight:500; margin-bottom:10px;}
+.quckDetail input{height:40px; vertical-align:middle;}
+.quckDetail input[type="text"]{width:70%; display:inline-block; padding:0 15px;}
+.quckDetail input[type="submit"]{width:27%; display:inline-block; margin-left:2%; text-align:center; background:#007abe; color:#FFF; font-weight:700; letter-spacing:1px; font-size:16px;}
+.quckDetail .orLine{text-align:center; display:block; position:relative; margin:40px 0 25px}
+.quckDetail .orLine:after{content:""; position:absolute; height:1px; width:100%; background:#d5d5d5; left:0; top:50%;}
+.quckDetail .orLine > span{display:inline-block; color:#313131; font-weight:600; font-size:14px; background:#f5f5f5; height:50px; width:50px; text-align:center; line-height:50px; border-radius:100%; position:relative; z-index:1;}
+.quckDetail p{font-size:16px; color:#313131; font-weight:500; text-decoration:underline; padding:20px 0 0;}
+.quckDetail p a{text-transform:uppercase;}
+
+
+
+.insurForm{padding:50px 0; clear:both; position:relative;}
+.insurForm .title{font-size:38px; font-weight:500; text-transform:capitalize; color:#000; margin:0 0 30px;}
+.formFildes{background:#ececec; padding:40px 20px;}
+.formFildes label{font-size:12px; color:#313131; text-transform:uppercase; display:block; font-weight:600; margin-bottom:10px;}
+.formFildes input,
+.formFildes select{height:50px; width:100%; padding:0 15px; border:0px; border-radius:8px;}
+.formFildes select{background:url(../images/select-arrow.png) no-repeat 96% center #FFF; appearance:none; -webkit-appearance:none; -moz-appearance:none; -ms-appearance:none; -o-appearance:none;}
+
+.formFildes .dateIcon{background:url(../images/date-icon.png) no-repeat 95% center #FFF;}
+
+.formFildes .form-group{margin-bottom:30px;}
+.formFildes .radioCheck p{font-size:12px; color:#313131; text-transform:uppercase; display:block; font-weight:600; margin-bottom:10px;}
+.formFildes .radioCheck label{display:inline-block; height:50px; font-size:14px; font-weight:400; padding-top:10px; margin-right:30px; margin-bottom:0px;}
+
+.formFildes .inputCheck{padding-top:20px;}
+.formFildes .inputCheck label{display:inline-block; margin-top:15px;}
+.formFildes .inputCheck .custom-checkbox{margin:12px 15px 0 0;}
+.formFildes .subBtn{display:inline-block; background:#007abe; color:#FFF; font-weight:600; padding:8px 40px; width:auto; float:right; font-size:16px; text-transform:uppercase; transition:all .5s; -webkit-transition:all .5s; -moz-transition:all .5s;}
+.formFildes .subBtn:hover{background:#005282;}
+.formFildes .planTitle{font-size:18px; color:#2f2f2f; font-weight:600; margin:15px 0;}
+
+.formFildes .carOwner{font-size:18px; color:#007abe; margin-bottom:30px; font-weight:500;}
+
+.selectPlan{margin-bottom:30px;}
+.selectPlan label{background:#FFF; text-align:center; padding:60px 0; position:relative; border-radius:8px;}
+.selectPlan h3{font-size:40px; color:#2f2f2f; font-weight:600; margin-bottom:15px;}
+.selectPlan .planName{color:#007abe; font-size:18px;}
+.selectPlan .custom-radio{height:42px; width:42px; position:absolute; right:-15px; top:-15px; background:none; margin:0;}
+.selectPlan .custom-radio.selected{background:url(../images/plan-select.png) no-repeat center center;}
+
+.formFildes .selectFile{background:url(../images/attached-file.png) no-repeat 95% center #FFF; position:relative; border-radius:8px;}
+.formFildes .selectFile input[type="file"]{opacity:0; z-index:9; position:relative;}
+.formFildes .selectFile .placeHolder{position:absolute; top:0px; left:0px; height:50px; line-height:50px; padding-left:20px; width:100%; opacity:.5;}
+
+.formFildes hr{border-color:#CCC;}
+
+
+.tabMenu{margin:0px; padding:0px;}
+.tabMenu ul{margin:0px; padding:0px;}
+.tabMenu li{float:left; width:20%;}
+.tabMenu li a{display:block; background:#f8f8f8; text-align:center; font-size:14px; color:#313131; padding:20px 0; font-weight:500;}
+.tabMenu li a:hover,
+.tabMenu li.active a{background:#007abe; color:#FFF;}
+.tabMenu li + li a{border-left:1px solid #ececec;}
+
+.selectPlan.tabelPlan{margin:0;}
+.selectPlan.tabelPlan h3{font-size:16px; margin:0;}
+.selectPlan.tabelPlan .planName{font-size:16px; margin-top:6px;}
+.selectPlan.tabelPlan label{padding:8px 0 0; border-radius:0; margin:0; background:none;}
+.selectPlan.tabelPlan .custom-radio{top:0px; right:0px; height:100%; width:100%;}
+.selectPlan.tabelPlan .custom-radio.selected{background-position:top right; background-size:20px;}
+.selectPlan.tabelPlan .custom-radio input[type="radio"]{top:0px; left:0; height:100%; width:100%;}
+
+.selectRadioR{float:right;}
+.selectRadioR label{margin:0px;}
+
+.policyCalc{position:relative;}
+.policyCalc strong{font-weight:600;}
+.policyCalc h3{font-size:16px; font-weight:600;}
+.policyCalc tr.alignBottom td{vertical-align:bottom;}
+.policyCalc .tableTopFix{position:sticky; top:0; z-index:1;}
+.policyCalc tr.headTitl{background:#DDD;}
+.policyCalc table.table tr:nth-child(even){background:#f9f9f9;}
+.policyCalc div.tableTopFix table.table tr{background:none;}
+.policyCalc div.tableTopFix table.table{background:#FFF;}
+.policyCalc .subBtn{margin-top:20px; float:none;}
+
+/* ==================== travel-insurance css ==================== */
+
+/* ===================== Placeholder ==================*/
+input::-webkit-input-placeholder {opacity:1;}
+input::-moz-placeholder {opacity:1;}
+input:-ms-input-placeholder {opacity:1;}
+input:-moz-placeholder {opacity:1;}
+.travelInsur {padding:70px 0;clear: both;position: relative;}
+.travelInsur h1{font-size:35px;color:#000;font-weight:500;margin-bottom:30px;}
+.insureForm{padding:40px 25px;overflow:hidden;background:#ececec;}
+.insureForm label{font-size:12px;color:#313131;float:left;text-transform:uppercase;font-weight:600;margin-bottom:10px;}
+.insureForm select{width:100%;height:54px;border:none;border-radius:10px;padding:0 20px;color:#8b8b8b;background:url(../images/select-arrow.png) no-repeat 96% center #FFF; appearance:none; -webkit-appearance:none; -moz-appearance:none; -ms-appearance:none; -o-appearance:none;}
+.insureForm input{width:100%;height:54px;border:none;border-radius:10px;padding:0 20px;color:#8b8b8b;}
+.insureForm .form-group{margin-bottom:25px;}
+.calen1{position:relative;}
+.insureForm .form-group i {color:#505050;font-size:26px;position:absolute;right:15px;top:40px;}
+a.addMore{float:right;font-size:12px;font-weight:600;color:#007abe;text-transform:uppercase;}
+a.addMore:hover{color:#000;}
+.insureForm button{background:#007abe;color:#fff;font-size:16px;text-transform:uppercase;font-weight:700;padding:15px 25px;float:right;border-radius:8px;margin-top:15px;letter-spacing:0.5px;}
+.insureForm button:hover,.insureForm button:focus{background:#0468a0;}
+.travelInsur img{margin-top:50px;}
+.insDetail h1{font-size:30px;color:#000;font-weight:500;margin-bottom:20px;}
+.insBox{border:1px solid #f1f1f1;overflow:hidden;padding:30px;}
+.insBox ~ .insBox{margin-top:25px;}
+.insBox li{color:#8b8b8b;font-weight:500;}
+.insBox li + li{padding-top:10px;}
+.insBox li span{float:right;color:#313131;font-weight:600;}
+.insDetail h3{margin-bottom:20px;font-size:12px;color:#007abe;text-transform:uppercase;font-weight:600;}
+.insDetail button{background:#007abe;color:#fff;font-size:16px;text-transform:uppercase;font-weight:700;padding:15px 25px;float:right;border-radius:8px;margin-top:40px;letter-spacing:0.5px;min-width:280px;text-align:center;}
+.insDetail button:hover,.insDetail button:focus{background:#0468a0;}
+.insImg{position:absolute;left:0;top:50px;max-width: 100%;}
+
+.acciInsur{padding:50px 0;clear: both;position: relative;}
+.acciInsur h1{font-size:38px;color:#000;font-weight:500;margin-bottom:30px;}
+.acciInsur .panel-title{background:#ececec;color:#151515;font-size:16px;text-transform:uppercase;font-weight:500;padding:20px 60px 20px 20px;border:none;position:relative;}
+.acciInsur .panel-group .panel{border:none;box-shadow:none;border-radius:0;}
+.acciInsur .panel-group .panel + .panel{margin-top:20px;}
+.acciInsur .panel-body{padding:0;}
+.acciInsur table{width:100%;border:1px solid #dadada;text-align:center;}
+.acciInsur th{text-align:center;color:#151515;font-size:16px;font-weight:500;padding:15px 5px;}
+.acciInsur td{border-top:1px solid #ececec;color:#151515;font-size:16px;font-weight:500;padding:15px 5px;}
+.acciInsur .panel-title i{position:absolute;right:40px;top:18px;color:#505050;font-size:22px;}
+.acciInsur button{background:#007abe;color:#fff;font-size:16px;text-transform:uppercase;font-weight:700;padding:15px 25px;float:right;border-radius:8px;margin-top:20px;letter-spacing:0.5px;min-width:250px;text-align:center;}
+.acciInsur button:hover,.acciInsur button:focus{background:#0468a0;}
+.hlthInsur{padding-bottom:0;border-bottom:1px solid #ececec;}
+.hlthInsur img{margin-top:0;}
+.selectInsure{text-align:center;}
+.selectInsure img{margin-bottom:10px;}
+.hlthInsur h4{font-size:18px;color:#313131;text-transform:uppercase;font-weight:500;margin-bottom:25px;}
+.selectInsure label{float:none;font-size:14px;text-transform:none;font-weight:400;}
+.selectInsure button{min-width:155px;float:none;}
+.fileUpload {position: relative;overflow: hidden; margin:0;color:#fff;width:100%;float:left;height:54px;background:#fff;border-radius:10px;color:#8b8b8b;}
+.fileUpload span{display:block;padding:16px 20px;}
+.fileUpload i{transform:rotate(100deg);top:18px !important;font-size:18px !important;color:#575757 !important;}
+.fileUpload input.upload {position: absolute;top: 0;right: 0;margin: 0;padding: 0;font-size: 20px;cursor: pointer;opacity: 0;filter: alpha(opacity=0);}
+
+/* ===================== Hospitalization Approval 16-7-2019 =======================*/
+.hosinsur img{ margin-top:55px;}
+.ins2 .orLine{text-align:center; display:block; position:relative; margin:20px 0 25px}
+.ins2 .orLine:after{content:""; position:absolute; height:1px; width:100%; background:#d5d5d5; left:0; top:50%;}
+.ins2 .orLine > span{display:inline-block; color:#313131; font-weight:600; font-size:14px; background:#f5f5f5; height:50px; width:50px; text-align:center; line-height:50px; border-radius:100%; position:relative; z-index:1;}
+.ins2 button{ margin:0px;}
+
+.select-title{color: #313131;font-weight: 500;padding:20px 0 0; font-size:22px;}
+.select-title2{color: #313131;font-weight: 500;padding:20px 0 0; font-size:18px; border-top:1px solid #c4c4c4;}
+.ceditIns{}
+.ceditIns .inputCheck{ display:inline-block;}
+.ceditIns .value{ display:inline-block; color:#007abe; padding-left:50px;text-transform: uppercase;font-weight: 600;margin-bottom: 10px;}
+.space30{ margin:20px 0 30px;}
+.space40{ margin:0px 0 30px;}
+.ceditIns span i {color: #505050;font-size: 26px;position: absolute;right: 15px;top: 40px;}
+
+/*=================== MEDIA QUERY ==================== */
+
+@media all and (max-width:1199px) {
+
+.subTitle{padding:0 100px;}
+#cssmenu > ul > li > a{padding:10px 15px;}
+
+
+}
+
+@media all and (max-width:991px) {
+
+
+footer .futAbout p{padding-right:0;}
+.ourServis .servicsCat li{width:32%;}
+.aboutSet a.watVid{margin:0 0 15px;}
+.aboutSet figure img{margin:0 auto;}
+
+header .topLogo{margin:-20px 0 5px;}
+header{background:#007abe; padding:10px 0; position:relative;}
+#cssmenu{margin-top:5px;}
+#cssmenu > ul > li > a{padding:5px 5px;}
+
+.inrHeader .regLogin{font-size:13px; color:#FFF;}
+.inrHeader .regLogin img{margin-right:8px;}
+
+header .headTop:before,
+header .headTop:after{display:none;}
+
+.topSlider .slidText{bottom:25%;}
+.inrHeader #cssmenu > ul > li > a{color:#e9e9e9;}
+
+
+.tabMenu li{float:none; width:33%; display:inline-block; margin:3px 0 0;}
+.tabMenu ul{text-align:center;}
+
+.tabMenu ul{text-align:center; background:#f8f8f8;}
+.tabMenu li a{border:1px solid #ececec;}
+
+}
+
+@media all and (max-width:767px) {
+
+.subTitle{padding:0 55px;}
+.ourServis .servicsCat li{width:49.3%;}
+.clientSay .owl-buttons,
+.ourPartner .owl-buttons{display:none;}
+.ourPartner #partner figure{padding:20px 10px 0;}
+.subTitle{padding:0;}
+
+.inrHeader .regLogin{border-top:1px solid rgba(255,255,255,0.2); padding-top:10px; text-align:left;}
+
+header .topLogo{margin:0;}
+header .headTop{position:absolute; padding:5px 0 5px 0; width:130px; top:20px; right:80px; z-index:9;}
+.headTop .topContact{display:none;}
+footer .copyRight p{padding:10px 0;}
+footer .copyRight,
+footer .copyRight .futSocal{text-align:center;}
+
+.loginForm{position:relative;}
+.login{padding: 20px 0;}
+.signUpForm{ width:100%; height:auto; position:relative;}
+.signUpForm .signUp{ text-align:center;}
+.signUpForm .form-group {margin-bottom: 1rem;}
+
+.topSlider .slidText{bottom:20%;}
+.topSlider .slidText h2 > span{font-size:70px;}
+
+.quckDetail input[type="text"]{width:100%;}
+.quckDetail input[type="submit"]{margin:10px 0 0; width:100%;}
+
+.selectPlan label{padding:40px 0;}
+
+.tabMenu li{width:49%;}
+
+#cssmenu ul li.signBtn a:hover{border-color:#e6e6e6; background:#00537f;}
+
+#cssmenu {width:50%; position:absolute; right:0; top:-60px;}
+#cssmenu ul{width:100%; display:none; margin-top:15px; background:#007abe; padding:15px;}
+#cssmenu > ul > li > a {padding:15px; text-align:left;}
+#cssmenu > ul > li:hover > a,
+#cssmenu > ul > li.active > a{background:#00537f; color:#FFF;}
+#cssmenu > ul > li + li a{border-top:1px solid rgba(255,255,255,0.2);}
+#cssmenu.align-center > ul,
+#cssmenu.align-right ul ul {text-align:left;}
+#cssmenu ul li,
+#cssmenu ul ul li,
+#cssmenu ul li:hover > ul > li {width:100%;height:auto;border-top:1px solid rgba(120, 120, 120, 0.15);}
+#cssmenu ul li a,
+#cssmenu ul ul li a {width:100%;}
+#cssmenu > ul > li,
+#cssmenu.align-center > ul > li,
+#cssmenu.align-right > ul > li {float:none;display:block;}
+#cssmenu ul ul li a {padding:20px 20px 20px 30px;font-size:12px;color:#000;background:none;}
+#cssmenu ul ul li:hover > a,
+#cssmenu ul ul li a:hover {color:#000;}
+#cssmenu ul ul ul li a {padding-left:40px;}
+#cssmenu ul ul,
+#cssmenu ul ul ul {position:relative;left:0;right:auto;width:100%;margin:0;}
+#cssmenu > ul > li.has-sub > a::after,
+#cssmenu ul ul li.has-sub > a::after {display:none;}
+#menu-line {display:none;}
+#cssmenu #menu-button {display:inline-block;padding:25px 30px;color:#000;cursor:pointer;font-size:12px;text-transform:uppercase;}
+#cssmenu #menu-button::after {content:'';position:absolute;top:16px;right:20px;display:block;width:25px;height:3px;background:#FFF;}
+#cssmenu #menu-button::before {content:'';position:absolute;top:25px;right:20px;display:block;width:25px;height:12px;border-top:3px solid #FFF;border-bottom:3px solid #FFF;}
+#cssmenu .submenu-button {position:absolute;z-index:10;right:0;top:0;display:block;border-left:1px solid rgba(120, 120, 120, 0.15);height:52px;width:52px;cursor:pointer;}
+#cssmenu .submenu-button::after {content:'';position:absolute;top:21px;left:26px;display:block;width:1px;height:11px;background:#000;z-index:99;}
+#cssmenu .submenu-button::before {content:'';position:absolute;left:21px;top:26px;display:block;width:11px;height:1px;background:#000;z-index:99;}
+#cssmenu .submenu-button.submenu-opened:after {display:none;}
+
+/* ==================== travel-insurance css ==================== */
+.travelInsur{padding:20px 0;}
+.travelInsur img{margin:0px 0 5px;}
+.travelInsur h1{font-size:28px;}
+a.addMore{clear:both;margin-bottom:10px;}
+.insureForm input{margin-bottom:10px;}
+.insDetail h1{font-size:30px !important;}
+.acciInsur .panel-title i{right:15px;}
+.acciInsur .panel-title{font-size:14px;padding:20px 30px 20px 15px}
+.acciInsur td,.acciInsur th{font-size:12px;}
+.acciInsur h1{font-size:18px;}
+.acciInsur{padding:20px 0;}
+.acciInsur button{min-width:auto;}
+.selectInsure label{font-size:13px;}
+.hlthInsur img{display:none;}
+.hlthInsur label img{display:block;}
+}
+
+
+
+@media all and (max-width:575px) {
+
+
+#cssmenu{width:100%;}
+#cssmenu ul{margin-top:0px;}
+.topSlider:before{display:none;}
+.ourServis{padding:50px 0;}
+
+.topSlider .slidText{bottom:auto; position:relative; background:#007abe; padding:15px 0; text-align:center;}
+.topSlider .slidText h2 > span{font-size:45px;}
+.topSlider .slidText p{font-size:16px; margin-top:10px;}
+.topSlider .slidText h2,
+.topSlider .slidText p{padding-left:0px;}
+.topSlider .slidText a{margin-left:0px;}
+
+.xs12{width:100%;}
+
+
+
+}
+
+@media all and (max-width:479px) {
+
+.title{font-size:20px;}
+.newsLetter .title{margin-bottom:20px;}
+.newsLetter .subScrib .inputFild{width:100%; margin-right:0;}
+.newsLetter .subScrib .submitBtn{width:100%; margin-top:10px;}
+
+.ourServis .servicsCat li p{font-size:14px;}
+
+header .topLogo{margin:0; width:50%;}
+header .headTop{width:100px; top:18px; right:77px;}
+
+#cssmenu{top:-50px;}
+
+.loginForm{ width:100%; position:relative;}
+.signUpForm .signUp{ text-align:center;}
+
+.quckDetail .orLine{margin:30px 0 0;}
+.motorInsur .title{font-size:30px; margin:20px 0;}
+
+
+.formFildes .inputCheck{padding-top:0;}
+.formFildes .subBtn{width:100%; float:none; margin-top:10px;}
+
+.formFildes{background:#ececec; padding:20px 10px;}
+.insurForm .title{font-size:32px; margin:0 0 20px;}
+.formFildes .inputCheck .custom-checkbox{margin:12px 10px 0 0;}
+
+.tabMenu li{width:100%;}
+}
+
+
+
+/********Page Css********/
+
+.privPolc{padding:20px 0; font-family: 'Montserrat', sans-serif;}
+.title{text-align:center;}
+.title h1{color:#383838; font-size:30px; font-weight:600; position:relative; padding-bottom:10px; margin-bottom:15px; font-family: 'Montserrat', sans-serif;}
+.title h1:after{content:""; position:absolute; bottom:0px; height:2px; width:120px; background:#383838; left:50%; margin-left:-60px;}
+
+.termTitle{color:#383838; font-size:24px; font-weight:600; margin:20px 0 10px; font-family: 'Montserrat', sans-serif;}
+h2{color:#383838; font-size:22px; font-weight:600; margin:20px 0 10px; font-family: 'Montserrat', sans-serif;}
+h3{color:#383838; font-size:20px; font-weight:500; margin:20px 0 10px; font-family: 'Montserrat', sans-serif;}
+p{color:#8b8b8b; margin-bottom:10px; font-weight:500;}
+.ulList ul{list-style:none; padding:0px; margin:20px 0;}
+.ulList ul li{color:#8b8b8b; font-size:15px; font-weight:500; font-weight:500; padding:10px 0;}
+.ulList ul li + li{border-top:1px solid #DDD;}
+
+.abutList{margin:15px 0; padding:0px;}
+.abutList ul{margin:0px; padding:0px;}
+.abutList li{list-style:disc; list-style-position:inside; line-height:24px; font-weight:500; color:#666; font-family: 'Montserrat', sans-serif;}
